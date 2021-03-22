@@ -18,7 +18,6 @@ class SearchBar extends Component {
             query: '',
             filter: 'Representatives',
             filters: ['Representatives', 'Polls'],
-            redirect: false,
             location: '',
         }
         this.getLocation = this.getLocation.bind(this);
@@ -47,13 +46,6 @@ class SearchBar extends Component {
         console.log(this.state.filter);
     }
 
-    renderRedirect = () => {
-        const {filter, query} = this.state;
-        let encoded_address = encodeURIComponent(query);
-        return( <Redirect to={{
-            pathname: `/search/${query}`
-        }} />);
-    }
     handleLocation= (event) => {
         this.getLocation({location: this.state.location})
         this.setState({query: this.state.location});
@@ -63,10 +55,10 @@ class SearchBar extends Component {
     }
 
     handleSubmit = (event) => {
-        event.preventDefault();
         const {filter, query} = this.state;
-        //let encoded_address = encodeURIComponent(query);
-        this.props.history.push(`/search/${query}`);
+        console.log(filter);
+        let encoded_address = encodeURIComponent(query);
+        this.props.history.push(`/search/${filter}/${encoded_address}`);
     }
 
     render() {
