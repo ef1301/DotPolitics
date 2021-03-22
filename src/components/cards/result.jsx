@@ -9,4 +9,14 @@ const ResultCard = (props) => {
     );
 };
 
-export default ResultCard;
+const ResultCardPoll = (props) => {
+    let out = props.item;
+    return (
+        <div>
+            {out.name}
+        </div>
+    );
+};
+
+export {ResultCard,ResultCardPoll};
+// export default ResultCard;

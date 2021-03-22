@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import RepByLocation from '../functionalComponents/repByLocation';
+import PollByLocation from '../functionalComponents/pollByLocation';
+
 export default class Search extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +14,11 @@ export default class Search extends Component {
         const {filter, query} = this.state;
         if(filter === 'Representatives') {
             return (<RepByLocation />);
-        } else {
+        }
+        else if(filter === 'Polls'){
+            return (<PollByLocation />);
+        } 
+        else {
             return (<div></div>);
         }
     }
@@ -21,7 +27,7 @@ export default class Search extends Component {
         const {filter, query} = this.state;
         return (
             <>
-                <RepByLocation />
+                <PollByLocation />
             </>
         );
     }
