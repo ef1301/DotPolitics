@@ -18,9 +18,25 @@ class SearchBar extends Component {
             query: '',
             filter: 'Representatives',
             filters: ['Representatives', 'Polls'],
-            redirect: false
+            redirect: false,
+            location: '',
         }
+        this.getLocation = this.getLocation.bind(this);
+        this.getCoordinates = this.getCoordinates.bind(this);
     }
+
+      getLocation(){
+          if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(this.getCoordinates);
+            }
+            else{alert("Location does not work")}
+      }
+    
+      getCoordinates(position){
+        this.setState({
+            location: [position.coords.latitude, position.coords.longitude]
+        })
+      }
 
     handleQuery = (event) => {
         this.setState({query: event.target.value});
@@ -38,7 +54,13 @@ class SearchBar extends Component {
             pathname: `/search/${query}`
         }} />);
     }
+    handleLocation= (event) => {
+        this.getLocation({location: this.state.location})
+        this.setState({query: this.state.location});
+        const {filter, query} = this.state;
+        this.props.history.push(`/search/${query}`);
 
+    }
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -72,6 +94,7 @@ class SearchBar extends Component {
                         })}
                     </DropdownButton>
                     <Button variant="primary" type="submit" onClick={this.handleSubmit}> Search </Button>
+                    <Button variant="primary" type="submit"  onClick={this.handleLocation}> Location </Button> 
                     </InputGroup>
                     </Form>
                 </>
