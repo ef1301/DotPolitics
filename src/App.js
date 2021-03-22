@@ -2,7 +2,7 @@ import SearchBar from './components/functionalComponents/SearchBar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Home, Search} from './components/views';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import RepByLocation from './components/functionalComponents/repByLocation';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/search/' component={Search}/>
+            <Route exact path='/search/Representatives/:query' children={(props) => <RepByLocation {...props}/>}/>
           </Switch>
       </Router>
     </div>
