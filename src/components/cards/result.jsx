@@ -1,7 +1,12 @@
-const ResultCard = (object) => {
+import React from 'react';
+
+const ResultCard = (props) => {
+    let election = props.item;
     return (
         <div>
-            stuff
+            {election.electionDay} {election.name}
         </div>
     );
 };
+
+export default ResultCard;
