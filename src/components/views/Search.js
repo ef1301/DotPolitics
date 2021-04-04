@@ -9,7 +9,7 @@ export default class Search extends Component {
     }
 
     searchResults = () => {
-        const {filter, query} = this.state;
+        const {filter} = this.state;
         if(filter === 'Representatives') {
             return (<RepByLocation />);
         } else {
@@ -18,7 +18,6 @@ export default class Search extends Component {
     }
 
     render() {
-        const {filter, query} = this.state;
         return (
             <>
                 <RepByLocation />
