@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-    Redirect,
     withRouter
 } from "react-router-dom";
 import {FormControl, InputGroup, Dropdown, DropdownButton, Button, Form} from 'react-bootstrap';
