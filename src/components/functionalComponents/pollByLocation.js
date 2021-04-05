@@ -23,7 +23,7 @@ const PollByLocation = (props) => {
                 setIsLoaded(isLoaded => true);
                 setError(error => er);
             });
-    }, []);
+    }, [query]);
 
     if(error) {
         return (<>Error: {error.message}</>);

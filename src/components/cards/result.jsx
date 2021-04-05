@@ -10,16 +10,16 @@ const ResultCard = (props) => {
             <Card.Body>
             {officials.photoUrl ? <img src={officials.photoUrl} alt={officials.name}></img> : <img src={"https://i.ibb.co/8B3XSYm/pfp-02.png"} alt={officials.name}></img>}
             <Card.Title>{officials.name}</Card.Title>
-                    Phone: {officials.phones ? officials.phones.map(number => <p>{number}</p>) : <p></p>}
-                    Links: {officials.urls ? officials.urls.map(link => <a href={link}>{link}</a>) : <p></p>}
-                    {officials.channels ? officials.channels.map(channel => {
+                    Phone: {officials.phones ? officials.phones.map((number,index) => <p key={index}>{number}</p>) : <p></p>}
+                    Links: {officials.urls ? officials.urls.map((link, index) => <a key={index} href={link}>{link}</a>) : <p></p>}
+                    {officials.channels ? officials.channels.map((channel, index) => {
                             if(channel.type === "Twitter") {
                                 const link = "https://twitter.com/" + channel.id;
-                                return(<SocialIcon url={link} />);
+                                return(<SocialIcon key={index} url={link} />);
                             } else if (channel.type === "Facebook") {
                                 const link = "https://facebook.com/" + channel.id;
-                                return(<SocialIcon url={link} />);
-                            }
+                                return(<SocialIcon key={index} url={link} />);
+                            } else return <img key={index}></img>;
                         }) :
                         <p></p>
                     }

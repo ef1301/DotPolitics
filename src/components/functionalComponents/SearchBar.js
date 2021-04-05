@@ -42,10 +42,6 @@ class SearchBar extends Component {
         this.getLocation({location: this.state.location})
         this.setState({query: this.state.location});
         event.preventDefault();
-       {/*} const {filter, query} = this.state;
-        console.log(filter);
-        let encoded_address = encodeURIComponent(query);
-    this.props.history.push(/search/${filter}/${encoded_address});*/}
     }
 
     handleSubmit = (event) => {
@@ -74,7 +70,7 @@ class SearchBar extends Component {
                         onSelect={this.handleFilter}
                     >
                         {filters.map((item, index) => {
-                            return (<Dropdown.Item eventKey={item} onChange={this.handleFilter} value={item}>{item}</Dropdown.Item>);
+                            return (<Dropdown.Item eventKey={item} key={index} onChange={this.handleFilter} value={item}>{item}</Dropdown.Item>);
                         })}
                     </DropdownButton>
                     <Button variant="primary" type="submit" onClick={this.handleSubmit}> Search </Button>
