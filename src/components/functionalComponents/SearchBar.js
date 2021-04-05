@@ -41,8 +41,11 @@ class SearchBar extends Component {
     handleLocation= (event) => {
         this.getLocation({location: this.state.location})
         this.setState({query: this.state.location});
-        const {filter, query} = this.state;
-        this.props.history.push(`/search/${filter}/${query}`);
+        event.preventDefault();
+       {/*} const {filter, query} = this.state;
+        console.log(filter);
+        let encoded_address = encodeURIComponent(query);
+    this.props.history.push(/search/${filter}/${encoded_address});*/}
     }
 
     handleSubmit = (event) => {
