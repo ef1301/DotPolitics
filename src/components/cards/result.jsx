@@ -1,13 +1,15 @@
 import React from 'react';
 import {Card} from 'react-bootstrap'
 import { SocialIcon } from 'react-social-icons';
+import '../styles/ResultCard.css';
 
 const ResultCard = (props) => {
     let officials = props.item;
     return (
-        <Card>
+        <Card className="repCard">
             <Card.Header>{officials.party}</Card.Header>
             <Card.Body>
+                {officials.photoUrl !== null ? <img src={officials.photoUrl}></img>: <img src={process.env.PUBLIC_URL + '/pfp.png'}></img>}
                 <Card.Title>{officials.name}</Card.Title>
                     <Card.Text>
                         Phone: {officials.phones.map(number => number)}
