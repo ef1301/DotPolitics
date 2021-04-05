@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
-import {ResultCard} from '../cards/result';
+import {ResultCardPoll} from '../cards/result';
 
-const RepByLocation = (props) => {
+const PollByLocation = (props) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
     const key = "AIzaSyDggZlSpjNNce614YxmnzLWCBm7QbN_-3A";
     const query = props.match.params.query;
+    console.log(query);
     React.useEffect(() => {
-        fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=${key}&address=${query}`)
+        fetch(`https://www.googleapis.com/civicinfo/v2/voterinfo?key=${key}&address=${query}&returnAllAvailableData=true`)
         .then(res => res.json())
         .then(
             (result) => {
                 setIsLoaded(isLoaded => true);
-                setItems(items => result.officials);
+                setItems(items => result.pollingLocations);
                 console.log(result);
             },
 
@@ -22,7 +23,7 @@ const RepByLocation = (props) => {
                 setIsLoaded(isLoaded => true);
                 setError(error => er);
             });
-    }, [query]);
+    }, []);
 
     if(error) {
         return (<>Error: {error.message}</>);
@@ -31,12 +32,12 @@ const RepByLocation = (props) => {
     } else {
         return (
             <>
-                {items.map((item,index) => (
-                    <ResultCard key={index} item={item}/>
-                ))}
+                {/* {items.map((item,index) => (
+                    <ResultCardPoll key={index} item={item}/>
+                ))} */}
             </>
         );
     }
 }
 
-export default RepByLocation;
+export default PollByLocation;
