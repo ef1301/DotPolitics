@@ -9,7 +9,7 @@ class SearchBar extends Component {
         super(props);
         this.state = {
             query: '',
-            filter: 'Polls',
+            filter: 'Representatives',
             filters: ['Representatives', 'Polls'],
             location: '',
         }
