@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import RepByLocation from '../functionalComponents/repByLocation';
 import PollByLocation from '../functionalComponents/pollByLocation';
-import SearchBar from '../functionalComponents/SearchBar';
-
+import '../styles/SearchComps.css';
 export default class Search extends Component {
     constructor(props) {
         super(props);
@@ -26,9 +25,9 @@ export default class Search extends Component {
 
     render() {
         return (
-            <>
-            {this.searchResults()}
-            </>
+            <div id="search-results">
+                {this.searchResults()}
+            </div>
         );
     }
 }

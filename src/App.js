@@ -1,4 +1,5 @@
 import SearchBar from './components/functionalComponents/SearchBar';
+import Footer from './components/functionalComponents/Footer';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Home, Search} from './components/views';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,6 +17,7 @@ function App() {
             <Route exact path='/search/Polls/:query' children={(props) => <><SearchBar/><PollByLocation {...props}/></>}/>
           </Switch>
       </Router>
+      <Footer/>
     </div>
   );
 }

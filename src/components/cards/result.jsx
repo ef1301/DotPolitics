@@ -2,6 +2,7 @@ import React from 'react';
 import {Card} from 'react-bootstrap'
 import { SocialIcon } from 'react-social-icons';
 import '../styles/ResultCard.css';
+
 const ResultCard = (props) => {
     let officials = props.item;
     return (
