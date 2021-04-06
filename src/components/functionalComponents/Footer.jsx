@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <h1 id="logo"><img src={logo} alt="DotPolitics Logo"></img>DotPolitics</h1>
-            <div id="footer-content"><a><h1>Contact Us</h1></a></div>
+            <div id="footer-content"><h1><a href="https://forms.gle/XM1m6oiSAnDP8BMx9">Contact Us</a></h1></div>
         </footer>
     );
 };

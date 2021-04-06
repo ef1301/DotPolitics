@@ -22,6 +22,16 @@ footer {
     padding: 0 3vw;
     width: 50%;
     display: inline-block;
+    color: white;
+}
+
+#footer-content h1 a {
+    color: white;
+    size: 1em;
+}
+
+#footer-content a:hover {
+    text-decoration: line-through;
 }
 
 #logo {
