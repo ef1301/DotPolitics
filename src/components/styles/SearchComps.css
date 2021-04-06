@@ -3,6 +3,11 @@
     margin: 5vh auto;
 }
 
+.btn.btn-primary {
+    background-color: #36618f;
+    border-color: white;
+}
+
 #search-results {
     width: 95vw;
     margin: 5vh auto;

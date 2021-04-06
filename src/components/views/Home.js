@@ -1,6 +1,4 @@
 import SearchBar from '../functionalComponents/SearchBar';
-//import parallaxBG1 from '../assets/vote.jpg';
-import parallaxBG1 from '../assets/bill.jpg';
 import '../styles/HomePage.css';
 
 const Home = () => {

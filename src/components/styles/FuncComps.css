@@ -1,8 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 #footer {
     width: 100%;
-    height: 15vh;
-    background-color: #6c757d;
+    height: 18vh;
+    background-color: #36618f;
     margin-top: 15vh;
     right: 0;
     bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-content {
+    font-family: 'Lora', serif;
+    color: white;
+    size: 1em;
+    width: 50%;
+    text-align: right;
+    padding: 0 3vw
+}
+
+#logo {
+    font-family: 'Lora', serif;
+    color: white;
+    size: 2em;
+    width: 50%;
+    padding: 0 3vw
+}
+
+#logo img {
+    height: 2em;
 }
