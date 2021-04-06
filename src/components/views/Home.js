@@ -1,16 +1,12 @@
-import React, {Component} from 'react';
-
-export default class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            results: [],
-        }
-    }
-
-    render() {
-        return (
-            <div></div>
-        );
-    }
+import SearchBar from '../functionalComponents/SearchBar';
+import '../styles/HomePage.css';
+const Home = () => {
+    return (
+        <>
+            <SearchBar/>
+            <div id="home-content"></div>
+        </>
+    );
 }
+
+export default Home;

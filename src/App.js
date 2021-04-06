@@ -9,12 +9,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <SearchBar/>
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/search/' component={Search}/>
-            <Route exact path='/search/Representatives/:query' children={(props) => <RepByLocation {...props}/>}/>
-            <Route exact path='/search/Polls/:query' children={(props) => <PollByLocation {...props}/>}/>
+            <Route exact path='/search/Representatives/:query' children={(props) => <><SearchBar/><RepByLocation {...props}/></>}/>
+            <Route exact path='/search/Polls/:query' children={(props) => <><SearchBar/><PollByLocation {...props}/></>}/>
           </Switch>
       </Router>
     </div>

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {
-    withRouter
-} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import {FormControl, InputGroup, Dropdown, DropdownButton, Button, Form, ButtonGroup} from 'react-bootstrap';
+import '../styles/SearchComps.css';
 
 class SearchBar extends Component {
     constructor(props) {
@@ -53,7 +52,7 @@ class SearchBar extends Component {
     render() {
         const {query, filter, filters} = this.state;
             return (
-                <>
+                <div id="search-bar">
                     <Form onSubmit={this.handleSubmit}>
                     <InputGroup >
                     <FormControl value={query} onChange={this.handleQuery} 
@@ -77,7 +76,7 @@ class SearchBar extends Component {
                     <Button variant="primary" type="submit"  onClick={this.handleLocation}> Location </Button> 
                     </InputGroup>
                     </Form>
-                </>
+                </div>
         );
     }
 }

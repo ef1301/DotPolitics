@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import RepByLocation from '../functionalComponents/repByLocation';
 import PollByLocation from '../functionalComponents/pollByLocation';
+import SearchBar from '../functionalComponents/SearchBar';
 
 export default class Search extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class Search extends Component {
             return (<PollByLocation />);
         } 
         else {
-            return (<div></div>);
+            return (<div>Sorry. That wasn't a valid search query.</div>);
         }
     }
 
