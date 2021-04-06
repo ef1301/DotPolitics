@@ -58,7 +58,7 @@ class SearchBar extends Component {
                     <FormControl value={query} onChange={this.handleQuery} 
                         placeholder="Search" 
                         aria-label="Search Bar" 
-                        aria-describedby="basic-addon2"
+                        aria-describedby="input-group-dropdown-2"
                     />
                 
                     <DropdownButton

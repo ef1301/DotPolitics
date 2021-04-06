@@ -8,6 +8,10 @@
     border-color: white;
 }
 
+.btn.btn-primary:hover {
+    background-color: #214163;
+}
+
 #search-results {
     width: 95vw;
     margin: 5vh auto;
