@@ -1,8 +1,8 @@
 # DotPolitics
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-DotPolitics is a useful tool to look up elected representatives across the United States based on location.
+DotPolitics is a useful and accessible tool to look up elected representatives across the United States based on location.
 Having the means to educate yourself and seek out representative information in a centralized manner is vital for change.
 We provide basic information and links to each representative's social media(s) and contact information, using the Google Civics Information API.
+This project uses React, the Google Civics Information API, the Javascript Geolocation API, React bootstrap, and other technologies.
 ### THE TEAM MEMBERS:
 Elizabeth Vanegas
 
