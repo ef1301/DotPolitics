@@ -2,6 +2,7 @@ import React from 'react';
 import {Card} from 'react-bootstrap'
 import { SocialIcon } from 'react-social-icons';
 import '../styles/ResultCard.css';
+
 const ResultCard = (props) => {
     let officials = props.item;
     return (
@@ -19,7 +20,7 @@ const ResultCard = (props) => {
                             } else if (channel.type === "Facebook") {
                                 const link = "https://facebook.com/" + channel.id;
                                 return(<SocialIcon key={index} url={link} />);
-                            } else return <img key={index}></img>;
+                            } else return <></>;
                         }) :
                         <p></p>
                     }
