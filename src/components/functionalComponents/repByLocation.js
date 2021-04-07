@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ResultCard from '../cards/result';
+import {ResultCard} from '../cards/result';
 
 const RepByLocation = (props) => {
     const [error, setError] = useState(null);
@@ -8,7 +8,6 @@ const RepByLocation = (props) => {
 
     const key = "AIzaSyDggZlSpjNNce614YxmnzLWCBm7QbN_-3A";
     const query = props.match.params.query;
-    console.log(query);
     React.useEffect(() => {
         fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=${key}&address=${query}`)
         .then(res => res.json())
@@ -23,7 +22,7 @@ const RepByLocation = (props) => {
                 setIsLoaded(isLoaded => true);
                 setError(error => er);
             });
-    }, []);
+    }, [query]);
 
     if(error) {
         return (<>Error: {error.message}</>);
