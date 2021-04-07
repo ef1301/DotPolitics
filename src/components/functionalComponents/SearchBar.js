@@ -54,13 +54,15 @@ class SearchBar extends Component {
             return (
                 <div id="search-bar">
                     <Form onSubmit={this.handleSubmit}>
+                    <Form.Label>Enter your location or hit the Location button:</Form.Label>
                     <InputGroup >
-                    <FormControl value={query} onChange={this.handleQuery} 
-                        placeholder="Search" 
-                        aria-label="Search Bar" 
-                        aria-describedby="input-group-dropdown-2"
-                    />
-                
+                        <FormControl value={query} onChange={this.handleQuery} 
+                            placeholder="Search By Location" 
+                            aria-label="Search Bar" 
+                            aria-describedby="input-group-dropdown-2"
+                        />
+
+                    <Form.Group>
                     <DropdownButton
                         as={ButtonGroup}
                         variant="outline-secondary"
@@ -72,8 +74,12 @@ class SearchBar extends Component {
                             return (<Dropdown.Item eventKey={item} key={index} onChange={this.handleFilter} value={item}>{item}</Dropdown.Item>);
                         })}
                     </DropdownButton>
+                    </Form.Group>
+
+                    <Form.Group>
                     <Button variant="primary" type="submit" onClick={this.handleSubmit}> Search </Button>
                     <Button variant="primary" type="submit"  onClick={this.handleLocation}> Location </Button> 
+                    </Form.Group>
                     </InputGroup>
                     </Form>
                 </div>
