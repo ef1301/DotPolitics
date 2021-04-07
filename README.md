@@ -1,5 +1,16 @@
 # DotPolitics
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DotPolitics is a useful and accessible tool to look up elected representatives across the United States based on location.
+Having the means to educate yourself and seek out representative information in a centralized manner is vital for change.
+We provide basic information and links to each representative's social media(s) and contact information, using the Google Civics Information API.
+This project uses React, the Google Civics Information API, the Javascript Geolocation API, React bootstrap, and other technologies.
+### THE TEAM MEMBERS:
+Elizabeth Vanegas
+
+Andrew Zhu
+
+Emily Fang
+
+ChengDong Ruan Hello
 
 ## Available Scripts
 
@@ -44,35 +55,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-### THE TEAM MEMBERS:
-Elizabeth Vanegas
-
-Andrew Zhu
-
-Emily Fang
-
-ChengDong Ruan Hello
