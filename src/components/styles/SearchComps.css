@@ -1,0 +1,25 @@
+#search-bar {
+    width: 90vw;
+    margin: 5vh auto;
+}
+
+.btn.btn-primary {
+    background-color: #36618f;
+    border-color: white;
+}
+
+.btn.btn-primary:hover {
+    background-color: #214163;
+}
+
+#search-results {
+    width: 95vw;
+    margin: 5vh auto;
+}
+
+.repCard img {
+    width: 15em;
+    height: 18em;
+    object-fit: cover;
+    object-position: center center;
+}
