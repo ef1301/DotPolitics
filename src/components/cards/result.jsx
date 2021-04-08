@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card} from 'react-bootstrap'
 import { SocialIcon } from 'react-social-icons';
+import pfp from '../assets/pfp.png';
 import '../styles/ResultCard.css';
 
 const ResultCard = (props) => {
@@ -9,14 +10,14 @@ const ResultCard = (props) => {
         <Card className="repCard">
             <Card.Header>{officials.party}</Card.Header>
             <Card.Body>
-            {officials.photoUrl ? <img src={officials.photoUrl} alt={officials.name}></img> : <img src={"https://i.ibb.co/8B3XSYm/pfp-02.png"} alt={officials.name}></img>}
+            {officials.photoUrl ? <img src={officials.photoUrl} alt={officials.name}></img> : <img src={pfp} alt={officials.name}></img>}
             <Card.Title>{officials.name}</Card.Title>
                     Phone: {officials.phones ? officials.phones.map((number,index) => <p key={index}>{number}</p>) : <p></p>}
-                    Links: {officials.urls ? officials.urls.map((link, index) => <a key={index} href={link}>{link}</a>) : <p></p>}
+                    Links: {officials.urls ? officials.urls.map((link, index) => <p><a key={index} href={link}>{link}</a></p>) : <p></p>} 
                     {officials.channels ? officials.channels.map((channel, index) => {
                             if(channel.type === "Twitter") {
                                 const link = "https://twitter.com/" + channel.id;
-                                return(<SocialIcon key={index} url={link} />);
+                                return(<SocialIcon key={index} url={link}  />);
                             } else if (channel.type === "Facebook") {
                                 const link = "https://facebook.com/" + channel.id;
                                 return(<SocialIcon key={index} url={link} />);
