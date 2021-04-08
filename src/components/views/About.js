@@ -23,10 +23,10 @@ const About = () => {
     </Card>
     </div>
     <div className="about-team" >
-    <Card className="about-team" style={{ width: '25rem' }}>
-    <h2 class="card-header">Meet the Team</h2>
+    <Card className="about-team" style={{ width: '40rem' }}>
+    <h2 class="card-header">Meet the Team</h2> <br></br>
     <ListGroup variant="flush">
-    <ListGroup.Item>Andrew</ListGroup.Item>
+    <ListGroup.Item>Andrew Zhu</ListGroup.Item>
     <ListGroup.Item>Chengdong Ruan</ListGroup.Item>
     <ListGroup.Item>Elizabeth Vanegas</ListGroup.Item>
     <ListGroup.Item>Emily Fang</ListGroup.Item>
