@@ -11,15 +11,11 @@ const NavBar = () => {
               <Nav>
             <NavLink to="/">
             <FcPodiumWithSpeaker color='#17E0E5' size='3rem'/>
-            <h1 >Dot Politics</h1>
+            <h1 >DotPolitics</h1>
             </NavLink>
             
             <Bars />
             <NavMenu>
-            <BsHouseDoorFill color='#19314d' size='3rem'/>
-                <NavLink to="/home" activeStyle>
-                    Home
-                </NavLink>
                 <BsFillPeopleFill color='#19314d' size='3rem'/>
                 <NavLink to="/about" activeStyle>
                     About Us

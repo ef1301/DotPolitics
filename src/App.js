@@ -14,8 +14,7 @@ function App() {
       <Router>
       <Navbar />
           <Switch>   
-             <Route exact path='/' component={Home} />
-            <Route exact path='/home' component={Home} />
+            <Route exact path='/' component={Home} />
             <Route exact path='/search/' component={Search}/>
             <Route exact path='/search/Representatives/:query' children={(props) => <><SearchBar/><RepByLocation {...props}/></>}/>
             <Route exact path='/search/Polls/:query' children={(props) => <><SearchBar/><PollByLocation {...props}/></>}/>
