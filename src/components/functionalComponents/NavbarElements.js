@@ -50,7 +50,6 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
 display: flex;
 align-items: center;
-margin-right: -1000px;
 height: 100px; // hight of the 4 navbar
 font-size: 2rem;  // size of the 4 navbar
 @media screen and (max-width: 768px){

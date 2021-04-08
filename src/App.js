@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Home, Search} from './components/views';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RepByLocation from './components/functionalComponents/repByLocation';
-import Navbar from './components/Navbar';
+import Navbar from './components/functionalComponents/Navbar';
 import PollByLocation from './components/functionalComponents/pollByLocation';
 
 

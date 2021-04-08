@@ -3,7 +3,7 @@ import React from 'react'
 import {FcPodiumWithSpeaker} from "react-icons/fc";
 import {BsHouseDoorFill} from "react-icons/bs";
 import {BsFillPeopleFill} from "react-icons/bs";
-import {Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink} from './NavbarElements';
+import {Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink} from '../functionalComponents/NavbarElements';
 
 const Navbar = () => {
     return (
