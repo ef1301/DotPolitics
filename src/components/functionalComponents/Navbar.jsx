@@ -12,8 +12,8 @@ const NavBar = () => {
             <NavLink to="/">
             <FcPodiumWithSpeaker color='#17E0E5' size='3rem'/>
             <h1 >Dot Politics</h1>
-            
             </NavLink>
+            
             <Bars />
             <NavMenu>
             <BsHouseDoorFill color='#19314d' size='3rem'/>

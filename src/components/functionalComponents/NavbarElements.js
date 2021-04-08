@@ -19,7 +19,7 @@ export const NavLink = styled(Link)`  // word color and Dot
     display: flex;
     align-items: center;
     text-decoration: cone;
-    padding: 0 1rem;
+    padding: 0 3rem;
     height: 100%;  // hight of the h1
     cursor: pointer;
     
@@ -50,7 +50,7 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
 display: flex;
 align-items: center;
-margin-right: -1000px;
+margin-right: 1px;
 height: 100px; // hight of the 4 navbar
 font-size: 2rem;  // size of the 4 navbar
 @media screen and (max-width: 768px){
