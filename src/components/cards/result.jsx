@@ -8,13 +8,24 @@ const ResultCard = (props) => {
     let officials = props.item;
     return (
         <Card className="repCard">
-            <Card.Header>{officials.party}</Card.Header>
+
+            <div tabIndex='0'><Card.Header>{officials.party}</Card.Header></div> 
+
             <Card.Body>
-            {officials.photoUrl ? <img src={officials.photoUrl} alt={officials.name}></img> : <img src={pfp} alt={officials.name}></img>}
+            <div tabIndex='0'>
+            {officials.photoUrl ? <img src={officials.photoUrl} alt={`${officials.name} photo`}></img> : <img src={pfp} alt={`${officials.name} photo`} aria-label="No Representative Photo"></img>}
+            </div>
+            <div tabIndex='0'>
             <Card.Title>{officials.name}</Card.Title>
-                    Phone: {officials.phones ? officials.phones.map((number,index) => <p key={index}>{number}</p>) : <p></p>}
-                    Links: {officials.urls ? officials.urls.map((link, index) => <p><a key={index} href={link}>{link}</a></p>) : <p></p>} 
-                    {officials.channels ? officials.channels.map((channel, index) => {
+            </div>
+            <div tabIndex='0'>
+            Phone: {officials.phones ? officials.phones.map((number,index) => <p key={index}>{number}</p>) : <p></p>}
+            </div>
+            <div tabIndex='0'>
+            Links: {officials.urls ? officials.urls.map((link, index) => <p><a key={index} href={link}>{link}</a></p>) : <p></p>} 
+            </div>
+            <div tabIndex='0' aria-label="Social Media Links">
+            {officials.channels ? officials.channels.map((channel, index) => {
                             if(channel.type === "Twitter") {
                                 const link = "https://twitter.com/" + channel.id;
                                 return(<SocialIcon key={index} url={link}  />);
@@ -25,6 +36,7 @@ const ResultCard = (props) => {
                         }) :
                         <p></p>
                     }
+            </div>
             </Card.Body>
         </Card>
     );

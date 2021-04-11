@@ -8,7 +8,10 @@ const NavBar = () => {
         <Nav>
         <NavLink to="/">
         <FcPodiumWithSpeaker color='#17E0E5' size='3rem'/>
-        <h1 >Dot Politics</h1>
+        <h1 href="/" class="logo" placeholder="" 
+                            aria-label="Dot Politics Logo" 
+                            aria-describedby="" > Dot Politics </h1>
+                            
         </NavLink>
 
         <Bars />
