@@ -5,10 +5,6 @@ const Home = () => {
     return (
         <>
             <SearchBar/>
-            <div id="home-content">
-                <div className="home-banner" tabIndex='0'>
-                </div>
-            </div>
             <div id="parallax-1"></div>
         </>
     );
