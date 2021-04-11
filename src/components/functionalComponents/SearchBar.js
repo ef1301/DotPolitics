@@ -58,14 +58,15 @@ class SearchBar extends Component {
                     <Form.Label>Enter your location or hit the Location button:</Form.Label>
                     <InputGroup >
                         <FormControl value={query} onChange={this.handleQuery} 
-                            placeholder="Search By Location" 
+                            placeholder="Enter Location Here" 
                             aria-label="Search Bar" 
-                            aria-describedby="input-group-dropdown-2"
+                            aria-describedby=""
                         />
 
                     <Form.Group>
                     <DropdownButton
                         as={ButtonGroup}
+                        aria-label="Drop Down Bar with 2 options"
                         variant="outline-secondary"
                         title={filter}
                         id="input-group-dropdown-2"
@@ -79,7 +80,7 @@ class SearchBar extends Component {
 
                     <Form.Group>
                     <Button variant="primary" type="submit" onClick={this.handleSubmit}> Search </Button>
-                    <Button variant="primary" type="submit"  onClick={this.handleLocation}> Location </Button> 
+                    <Button variant="primary" type="submit"  onClick={this.handleLocation} aria-label="Click to enter current location in search bar."> Location </Button> 
                     </Form.Group>
                     </InputGroup>
                     </Form>
