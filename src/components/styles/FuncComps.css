@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+#home-nav {
+    margin-top: 1.5%;
+}
+
 footer {
     overflow: hidden;
     width: 100%;
@@ -15,12 +19,13 @@ footer {
 }
 
 #footer-content {
+    height: 100%;
     font-family: 'Lora', serif;
     color: white;
     size: 1em;
     text-align: right;
     padding: 0 3vw;
-    width: 50%;
+    /*width: 50%;*/
     display: inline-block;
     color: white;
 }
@@ -43,6 +48,8 @@ footer {
     width: 50%;
 }
 
-#logo img {
-    height: 2em;
+#logo {
+    height: 1.5em;
+    width: auto;
+    margin: 0;
 }

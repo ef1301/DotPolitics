@@ -4,21 +4,20 @@ import{FaBars} from 'react-icons/fa'
 
 export const Nav = styled.nav`
     
-    
-    background: #6BAAF3;
-    height: 100px;
+    color: white;
+    background-color: #36618f;
     display: flex;
-    
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: 0.5rem calc{{100vw -1000px} / 2};
     z-index: 10;
 `
 
 export const NavLink = styled(Link)`  // word color and Dot
-    color: #000000;
+    color: white;
     display: flex;
     align-items: center;
-    text-decoration: cone;
+    text-decoration: none;
     padding: 0 1rem;
     height: 100%;  // hight of the h1
     cursor: pointer;

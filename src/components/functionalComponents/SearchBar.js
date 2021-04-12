@@ -53,14 +53,13 @@ class SearchBar extends Component {
     render() {
         const {query, filter, filters} = this.state;
             return (
-                <div id="search-bar">
+                <div id="search-bar" aria-describedby="searchbar-label">
                     <Form onSubmit={this.handleSubmit}>
-                    <Form.Label>Enter your location or hit the Location button:</Form.Label>
+                    <Form.Label id="searchbar-label">Enter your location or hit the Location button:</Form.Label>
                     <InputGroup >
                         <FormControl value={query} onChange={this.handleQuery} 
                             placeholder="Enter Location Here" 
                             aria-label="Search Bar" 
-                            aria-describedby=""
                         />
 
                     <Form.Group>
