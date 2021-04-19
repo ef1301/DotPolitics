@@ -3,7 +3,6 @@ import {withRouter} from "react-router-dom";
 import {FormControl, InputGroup, Dropdown, DropdownButton, Button, Form, ButtonGroup} from 'react-bootstrap';
 import '../styles/SearchComps.css';
 
-
 class SearchBar extends Component {
     constructor(props) {
         super(props);
@@ -11,24 +10,28 @@ class SearchBar extends Component {
             query: '',
             filter: 'Representatives',
             filters: ['Representatives', 'Polls'],
-            location: '',
+            location: ''
         }
         this.getLocation = this.getLocation.bind(this);
-        this.getCoordinates = this.getCoordinates.bind(this);
     }
 
-    getLocation(){
-        if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(this.getCoordinates);
-            }
-        else{alert("Location does not work")}
+    componentDidMount(){
+        this.getLocation();
     }
+
+    getLocation() {
+        const position = window.navigator && window.navigator.geolocation 
+        if (position) {
+          position.getCurrentPosition((position) => {
+            this.setState({
+              location: [position.coords.latitude,position.coords.longitude]
+            })
+          }, (error) => {
+            this.setState({ location : 'error', })
+          })
+        }
+      }
     
-    getCoordinates(position){
-        this.setState({
-            location: [position.coords.latitude, position.coords.longitude]
-        })
-    }
 
     handleQuery = (event) => {
         this.setState({query: event.target.value});
@@ -39,9 +42,7 @@ class SearchBar extends Component {
     }
 
     handleLocation= (event) => {
-        this.getLocation({location: this.state.location})
         this.setState({query: this.state.location});
-        event.preventDefault();
     }
 
     handleSubmit = (event) => {
