@@ -1,8 +1,9 @@
 import React from 'react'
 import '../styles/FuncComps.css';
 import logo from '../assets/logo_white.png';
-import {BsFillPeopleFill} from "react-icons/bs";
-import {Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink} from './NavbarElements';
+//import {BsFillPeopleFill} from "react-icons/bs";
+//NavBtn,NavBtnLink
+import {Nav,NavLink,Bars,NavMenu} from './NavbarElements';
 
 const NavBar = () => {
     return (
