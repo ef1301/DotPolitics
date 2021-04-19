@@ -1,5 +1,5 @@
 import '../styles/FuncComps.css';
-import logo from '../assets/logo_white.png';
+//import logo from '../assets/logo_white.png';
 
 const Footer = () => {
     return (

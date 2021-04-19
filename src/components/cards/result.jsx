@@ -13,10 +13,11 @@ const ResultCard = (props) => {
 
             <Card.Body>
             <div tabIndex='0'>
-            {officials.photoUrl ? <img src={officials.photoUrl} alt={`${officials.name} photo`}></img> : <img src={pfp} alt={`${officials.name} photo`} aria-label="No Representative Photo"></img>}
+            {officials.photoUrl ? <img src={officials.photoUrl} alt={`${officials.name}`}></img> : <img src={pfp} alt={`${officials.name}`} aria-label="No Representative Photo"></img>}
             </div>
             <div tabIndex='0'>
             <Card.Title>{officials.name}</Card.Title>
+            {officials.officeName}
             </div>
             <div tabIndex='0'>
             Phone: {officials.phones ? officials.phones.map((number,index) => <p key={index}>{number}</p>) : <p></p>}

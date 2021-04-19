@@ -14,7 +14,15 @@ const RepByLocation = (props) => {
         .then(
             (result) => {
                 setIsLoaded(isLoaded => true);
-                setItems(items => result.officials);
+                setItems(items => {
+                    const newItems = result.officials;
+                    result.offices.map(office => 
+                        office.officialIndices.map(index =>
+                            newItems[index].officeName = office.name
+                        )
+                    );
+                    return newItems;
+                });
                 console.log(result);
             },
 
@@ -23,6 +31,8 @@ const RepByLocation = (props) => {
                 setError(error => er);
             });
     }, [query]);
+
+    console.log(items);
 
     if(error) {
         return (<>Error: {error.message}</>);
