@@ -6,7 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RepByLocation from './components/functionalComponents/repByLocation';
 import Navbar from './components/functionalComponents/Navbar';
 import PollByLocation from './components/functionalComponents/pollByLocation';
-
+import PDF from './components/functionalComponents/PDF';
+import { PDFViewer, Text } from '@react-pdf/renderer';
+import PDFDownload from "./components/functionalComponents/PDFDownload"
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
           <Switch>   
             <Route exact path='/' component={Home} />
             <Route exact path='/search/' component={Search}/>
-            <Route exact path='/search/Representatives/:query' children={(props) => <><SearchBar/><RepByLocation {...props}/></>}/>
+            <Route exact path='/search/Representatives/:query' children={(props) => <><SearchBar/><RepByLocation {...props}/> <PDFDownload {...props}/></>} />
             <Route exact path='/search/Polls/:query' children={(props) => <><SearchBar/><PollByLocation {...props}/></>}/>
             <Route exact path='/About' component={About}/>
           </Switch>
