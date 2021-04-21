@@ -17,7 +17,7 @@ const NavBar = () => {
         <Bars />
         <NavMenu>
             {/*<BsFillPeopleFill color='#19314d' size='3rem'/>*/}
-            <NavLink to="/about" activeStyle>About Us</NavLink>
+            <NavLink to="/about">About Us</NavLink>
         </NavMenu>
         </Nav>
     );
