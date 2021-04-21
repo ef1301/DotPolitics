@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {ResultCardPoll} from '../cards/result';
+import {Card} from 'react-bootstrap';
+import '../styles/ResultCard.css';
 
 const PollByLocation = (props) => {
     const [error, setError] = useState(null);
@@ -8,34 +10,49 @@ const PollByLocation = (props) => {
 
     const key = "AIzaSyDggZlSpjNNce614YxmnzLWCBm7QbN_-3A";
     const query = props.match.params.query;
-    console.log(query);
     React.useEffect(() => {
-        fetch(`https://www.googleapis.com/civicinfo/v2/voterinfo?key=${key}&address=${query}&returnAllAvailableData=true`)
+        fetch(`https://www.googleapis.com/civicinfo/v2/voterinfo?key=${key}&address=${query}`)
+        //&returnAllAvailableData=true
         .then(res => res.json())
         .then(
             (result) => {
-                setIsLoaded(isLoaded => true);
-                setItems(items => result.pollingLocations);
-                console.log(result);
+                if(result.error) {
+                    setIsLoaded(true);
+                    setError(result.error);
+                } else {
+                    setIsLoaded(true);
+                    setItems(result.pollingLocations);
+                }
             },
+            (error) => {
+                setIsLoaded(true);
+                setError(error);
+            }
+        )
+            
+    }, []);
 
-            (er) => {
-                setIsLoaded(isLoaded => true);
-                setError(error => er);
-            });
-    }, [query]);
+    console.log(error);
 
     if(error) {
-        return (<>Error: {error.message}</>);
+        return (<div id="results"><Card className="resultCard">
+        <Card.Header>Error {error.code}:</Card.Header> 
+        <Card.Body>{error.message}.</Card.Body>
+        {error.message == "Failed to parse address" ? <Card.Body><Card.Title>Disclaimer:</Card.Title>If your address has failed to parse, the addressed entered may not be an existing address or it is not within the US territories.</Card.Body>
+        : <Card.Title>Please try again.</Card.Title>
+        }
+        </Card></div>);
     } else if(!isLoaded) {
-        return (<>Loading Search Results...</>);
+        return (<div id="results">
+        <Card><Card.Body>Loading Search Results...</Card.Body></Card>
+        </div>);
     } else {
         return (
-            <>
-                {/* {items.map((item,index) => (
+            <div id="results">
+                {items.map((item,index) => (
                     <ResultCardPoll key={index} item={item}/>
-                ))} */}
-            </>
+                ))}
+            </div>
         );
     }
 }

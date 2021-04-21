@@ -1,13 +1,12 @@
 import React from 'react';
-import {Card} from 'react-bootstrap'
+import {Card} from 'react-bootstrap';
 import { SocialIcon } from 'react-social-icons';
 import pfp from '../assets/pfp.png';
-import '../styles/ResultCard.css';
 
 const ResultCard = (props) => {
     let officials = props.item;
     return (
-        <Card className="repCard">
+        <Card className="resultCard">
 
             <div tabIndex='0'><Card.Header>{officials.party}</Card.Header></div> 
 
@@ -46,9 +45,9 @@ const ResultCard = (props) => {
 const ResultCardPoll = (props) => {
     let out = props.item;
     return (
-        <div>
+        <Card>
             {out.name}
-        </div>
+        </Card>
     );
 };
 
