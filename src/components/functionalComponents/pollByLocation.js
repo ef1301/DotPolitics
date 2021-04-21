@@ -38,7 +38,7 @@ const PollByLocation = (props) => {
         return (<div id="results"><Card className="resultCard">
         <Card.Header>Error {error.code}:</Card.Header> 
         <Card.Body>{error.message}.</Card.Body>
-        {error.message === "Failed to parse address" ? <Card.Body><Card.Title>Disclaimer:</Card.Title>If your address has failed to parse, the addressed entered may not be an existing address or it is not within the US territories.</Card.Body>
+        {error.message === "Failed to parse address" ? <Card.Body><Card.Title>Disclaimer:</Card.Title>If your address has failed to parse, the address entered may not be an existing address or it is not within the US territories.</Card.Body>
         : <Card.Title>Please try again.</Card.Title>
         }
         </Card></div>);
