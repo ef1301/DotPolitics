@@ -54,6 +54,7 @@ const RepByLocation = (props) => {
     } else {
         return (
             <div id="results">
+                <h1>Search Results for: {decodeURIComponent(query)}</h1>
                 {items.map((item,index) => (
                     <ResultCard key={index} item={item}/>
                 ))}

@@ -44,9 +44,16 @@ const ResultCard = (props) => {
 
 const ResultCardPoll = (props) => {
     let out = props.item;
+    let address = "";
+    Object.entries(out.address).forEach(([key,value]) => {
+        if(value !== "") {
+            address += value + " ";
+        }
+    })
     return (
         <Card>
-            {out.name}
+            <Card.Header>{address}</Card.Header>
+            <Card.Body>Polling Hours: {out.pollingHours}</Card.Body>
         </Card>
     );
 };
