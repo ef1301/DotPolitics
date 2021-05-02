@@ -1,38 +1,48 @@
 .image{
-    width: 282px;
-    height: 323px;
-    position: relative;
-    font-size: 18px;
-    bottom: 20px;
+    width: 15em;
+    height: 100%;
+    text-align: center;
+    justify-content: flex-start;
+    font-size: calc(0.1rem + 1vw);
+    
 }
 
 .party{
     position: absolute;
-    width: 225px;
+    width: 400px;
     height: 56px;
-    font-size: 21px;
+    font-size: calc(1.0rem + 1vw);
     color:black;
-    margin-left:780px;
+    margin-left:50%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    top: 30px;
+    top: 8%;
 }
 .name{
     position: absolute;
-    font-size: 48px; 
-    width: 490px;
-    height: 55px;
-    left: 350px;
-    bottom: 290px;
+    text-align: center;
+    justify-content:space-around ;
+    font-size: calc(1.2rem + 1vw);
+    padding-right: 35%;
+    width: 95%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    bottom: 75%;
+    
 }
 .secondname{
-    font-size: 36px; 
+    font-size: calc(1.2rem + 1vw);
     position: absolute;
-    width: 1200px;
-    height: 56px;
-    left: 350px;
-    bottom: 220px;
+    text-align: center;
+    justify-content: center;
+    right: 38%;
+    top: 30%;
+    width: 50%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .phone{
@@ -42,9 +52,9 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: calc(1.2rem + 1vw);
     line-height: 56px;
-    left: 350px;
+    left: 21%;
     bottom: 110px;
     color: #000000; 
 }
@@ -58,17 +68,103 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: calc(1.2rem + 1vw);
     line-height: 56px;
-    left: 750px;
+    left: 40%;
     bottom: 135px;
     color: #000000;
 }
 
 .website{
     position: absolute;
+    justify-content: flex-end;
     width: 233px;
-    height: 50px;
-    right: 10px;
+    height: 10%;
+    right: 5%;
     bottom: 130px;
+    font-size: calc(1.2rem + 1vw);
 }
+@media (max-width: 960px) {
+    .image{
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        justify-content: flex-start;
+        font-size: 60%;
+        
+    }
+    .name{
+        position: absolute;
+        text-align: center;
+        justify-content:space-around ;
+        font-size: 15px;
+        padding-right: 10%;
+        width: 95%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        
+    }
+    .party{
+        position: absolute;
+        width: 40%;
+        height: 56px;
+        font-size: 15px;
+        color:black;
+        margin-left:60%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top: 9%;
+    }
+    .secondname{
+        font-size: 15px;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        right: 20%;
+        bottom: 60%;
+        width: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .phone{
+        position: absolute;
+        width: 30%;
+        height: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 150%;
+        left: 32%;
+        bottom: -8%;
+        color: #000000; 
+    }
+    
+    .link{
+    position: absolute;
+    width: 40%;
+    height: 30%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    left: 55%;
+    bottom: 12%;
+    color: #000000;
+    }
+    .website{
+        position: absolute;
+        justify-content: flex-end;
+        width: 20%;
+        height: 10%;
+        right: 1%;
+        bottom: 10%;
+        font-size: 5px
+    }
+  }
