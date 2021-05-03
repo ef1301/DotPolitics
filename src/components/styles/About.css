@@ -12,8 +12,8 @@
     font-weight: bold;
 }
 
-about-logo {
-    align-items: center;
+#about-logo {
+    height: 15vh;
 }
 
 .about-banner {
