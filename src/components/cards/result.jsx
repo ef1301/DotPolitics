@@ -5,6 +5,13 @@ import pfp from '../assets/pfp.png';
 
 const ResultCard = (props) => {
     let officials = props.item;
+
+    const hideImgWhenError = e => {
+        e.target.onerror = null;
+        console.log(e);
+        e.target.src=pfp;
+    };
+
     return (
         <Card className="resultCard">
 
@@ -23,7 +30,7 @@ const ResultCard = (props) => {
 
 
             <div className="image" tabIndex='0'>
-            {officials.photoUrl ? <img src={officials.photoUrl} alt={`${officials.name}`}></img> : <img src={pfp} alt={`${officials.name}`} aria-label="No Representative Photo"></img>}
+            {officials.photoUrl ? <img src={officials.photoUrl} onError={hideImgWhenError} alt={`${officials.name}`}></img> : <img src={pfp} alt={`${officials.name}`} aria-label="No Representative Photo"></img>}
             </div>
 
             
