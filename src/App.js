@@ -4,11 +4,12 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Home, Search, About} from './components/views';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RepByLocation from './components/functionalComponents/repByLocation';
-import PollByLocation from './components/functionalComponents/pollByLocation';
 import Navbar from './components/functionalComponents/Navbar';
-import PDF from './components/functionalComponents/PDF';
-import { PDFViewer, Text } from '@react-pdf/renderer';
+import PollByLocation from './components/functionalComponents/pollByLocation';
+//import PDF from './components/functionalComponents/PDF';
+//import { PDFViewer, Text } from '@react-pdf/renderer';
 import PDFDownload from "./components/functionalComponents/PDFDownload"
+
 
 
 function App() {

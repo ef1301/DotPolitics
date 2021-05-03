@@ -1,13 +1,19 @@
 import React from 'react';
-import {Card} from 'react-bootstrap'
+import {Card} from 'react-bootstrap';
 import { SocialIcon } from 'react-social-icons';
 import pfp from '../assets/pfp.png';
-import '../styles/ResultCard.css';
 
 const ResultCard = (props) => {
     let officials = props.item;
+
+    const hideImgWhenError = e => {
+        e.target.onerror = null;
+        console.log(e);
+        e.target.src=pfp;
+    };
+
     return (
-        <Card className="repCard">
+        <Card className="resultCard">
 
             <div className="party"tabIndex='0'>
             <Card.Header>{officials.party}</Card.Header>
@@ -24,7 +30,7 @@ const ResultCard = (props) => {
 
 
             <div className="image" tabIndex='0'>
-            {officials.photoUrl ? <img src={officials.photoUrl} alt={`${officials.name}`}></img> : <img src={pfp} alt={`${officials.name}`} aria-label="No Representative Photo"></img>}
+            {officials.photoUrl ? <img src={officials.photoUrl} onError={hideImgWhenError} alt={`${officials.name}`}></img> : <img src={pfp} alt={`${officials.name}`} aria-label="No Representative Photo"></img>}
             </div>
 
             
@@ -43,10 +49,10 @@ const ResultCard = (props) => {
             {officials.channels ? officials.channels.map((channel, index) => {
                             if(channel.type === "Twitter") {
                                 const link = "https://twitter.com/" + channel.id;
-                                return(<SocialIcon key={index} style={{ height: 40, width: 40 }} url={link}  />);
+                                return(<SocialIcon key={index} style={{ height: 20, width: 20 }} url={link}  />);
                             } else if (channel.type === "Facebook") {
                                 const link = "https://facebook.com/" + channel.id;
-                                return(<SocialIcon key={index}style={{ height: 40, width: 40 }} url={link} />);
+                                return(<SocialIcon key={index}style={{ height: 20, width: 20 }} url={link} />);
                             } else return <></>;
                         }) :
                         <p></p>
@@ -59,10 +65,17 @@ const ResultCard = (props) => {
 
 const ResultCardPoll = (props) => {
     let out = props.item;
+    let address = "";
+    Object.entries(out.address).forEach(([key,value]) => {
+        if(value !== "") {
+            address += value + " ";
+        }
+    })
     return (
-        <div>
-            {out.name}
-        </div>
+        <Card>
+            <Card.Header>{address}</Card.Header>
+            <Card.Body>Polling Hours: {out.pollingHours}</Card.Body>
+        </Card>
     );
 };
 
