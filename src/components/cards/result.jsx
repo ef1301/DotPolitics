@@ -8,23 +8,37 @@ const ResultCard = (props) => {
     return (
         <Card className="resultCard">
 
-            <div tabIndex='0'><Card.Header>{officials.party}</Card.Header></div> 
-
+            <div className="party"tabIndex='0'>
+            <Card.Header>{officials.party}</Card.Header>
+            </div> 
+            
             <Card.Body>
-            <div tabIndex='0'>
-            {officials.photoUrl ? <img src={officials.photoUrl} alt={`${officials.name}`}></img> : <img src={pfp} alt={`${officials.name}`} aria-label="No Representative Photo"></img>}
+
+            <div className="name"tabIndex='0'>
+            {officials.name}
             </div>
-            <div tabIndex='0'>
-            <Card.Title>{officials.name}</Card.Title>
+            <div className="secondname"tabIndex='0'>
             {officials.officeName}
             </div>
-            <div tabIndex='0'>
+
+
+            <div className="image" tabIndex='0'>
+            {officials.photoUrl ? <img src={officials.photoUrl} alt={`${officials.name}`}></img> : <img src={pfp} alt={`${officials.name}`} aria-label="No Representative Photo"></img>}
+            </div>
+
+            
+
+            <div className="phone"tabIndex='0'>
             Phone: {officials.phones ? officials.phones.map((number,index) => <p key={index}>{number}</p>) : <p></p>}
             </div>
-            <div tabIndex='0'>
+
+
+            <div className="link"tabIndex='0'>
             Links: {officials.urls ? officials.urls.map((link, index) => <p><a key={index} href={link}>{link}</a></p>) : <p></p>} 
             </div>
-            <div tabIndex='0' aria-label="Social Media Links">
+
+
+            <div className="website"tabIndex='0' aria-label="Social Media Links">
             {officials.channels ? officials.channels.map((channel, index) => {
                             if(channel.type === "Twitter") {
                                 const link = "https://twitter.com/" + channel.id;

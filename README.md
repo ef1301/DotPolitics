@@ -10,7 +10,7 @@ Andrew Zhu
 
 Emily Fang
 
-ChengDong Ruan Hello
+ChengDong Ruan 
 
 ## Available Scripts
 

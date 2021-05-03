@@ -17,4 +17,78 @@
     height: 18em;
     object-fit: cover;
     object-position: center center;
+  
+.image{
+    width: 282px;
+    height: 323px;
+    position: relative;
+    font-size: 18px;
+    bottom: 20px;
+}
+
+.party{
+    position: absolute;
+    width: 225px;
+    height: 56px;
+    font-size: 21px;
+    color:black;
+    margin-left:780px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    top: 30px;
+}
+.name{
+    position: absolute;
+    font-size: 48px; 
+    width: 490px;
+    height: 55px;
+    left: 350px;
+    bottom: 290px;
+}
+.secondname{
+    font-size: 36px; 
+    position: absolute;
+    width: 1200px;
+    height: 56px;
+    left: 350px;
+    bottom: 220px;
+}
+
+.phone{
+    position: absolute;
+    width: 350px;
+    height: 82px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 56px;
+    left: 350px;
+    bottom: 110px;
+    color: #000000; 
+}
+
+
+.link{
+    position: absolute;
+    width: 700px;
+    height: 56px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 56px;
+    left: 750px;
+    bottom: 135px;
+    color: #000000;
+}
+
+.website{
+    position: absolute;
+    width: 233px;
+    height: 50px;
+    right: 10px;
+    bottom: 130px;
 }
