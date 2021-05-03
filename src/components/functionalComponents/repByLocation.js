@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {ResultCard} from '../cards/result';
+import {Card} from 'react-bootstrap';
+import '../styles/ResultCard.css';
 
 const RepByLocation = (props) => {
     const [error, setError] = useState(null);
@@ -13,17 +15,22 @@ const RepByLocation = (props) => {
         .then(res => res.json())
         .then(
             (result) => {
-                setIsLoaded(isLoaded => true);
-                setItems(items => {
-                    const newItems = result.officials;
-                    result.offices.map(office => 
-                        office.officialIndices.map(index =>
-                            newItems[index].officeName = office.name
-                        )
-                    );
-                    return newItems;
-                });
-                console.log(result);
+                //console.log(result);
+                if(result.error) {
+                    setIsLoaded(isLoaded => true);
+                    setError(result.error);
+                } else {
+                    setIsLoaded(isLoaded => true);
+                    setItems(items => {
+                        const newItems = result.officials;
+                        result.offices.map(office => 
+                            office.officialIndices.map(index =>
+                                newItems[index].officeName = office.name
+                            )
+                        );
+                        return newItems;
+                    });
+                }
             },
 
             (er) => {
@@ -32,19 +39,26 @@ const RepByLocation = (props) => {
             });
     }, [query]);
 
-    console.log(items);
-
     if(error) {
-        return (<>Error: {error.message}</>);
+        return (<div id="results"><Card className="resultCard">
+        <Card.Header>Error {error.code}:</Card.Header> 
+        <Card.Body>{error.message}.</Card.Body>
+        {error.message === "Failed to parse address" ? <Card.Body><Card.Title>Disclaimer:</Card.Title>If your address has failed to parse, the address entered may not be an existing address or it is not within the US territories.</Card.Body>
+        : <Card.Title>Please try again.</Card.Title>
+        }
+        </Card></div>);
     } else if(!isLoaded) {
-        return (<>Loading Search Results...</>);
+        return (<div id="results">
+            <Card><Card.Body>Loading Search Results...</Card.Body></Card>
+            </div>);
     } else {
         return (
-            <>
+            <div id="results">
+                <h1>Search Results for: {decodeURIComponent(query)}</h1>
                 {items.map((item,index) => (
                     <ResultCard key={index} item={item}/>
                 ))}
-            </>
+            </div>
         );
     }
 }

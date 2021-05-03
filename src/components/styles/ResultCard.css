@@ -1,3 +1,24 @@
+#results {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.resultCard {
+    width: 90vw;
+    margin: auto;
+}
+
+.resultCard a {
+    color: #36618f;
+}
+
+.resultCard img {
+    width: 15em;
+    height: 18em;
+    object-fit: cover;
+    object-position: center center;
+}
+
 .image{
     width: 282px;
     height: 323px;
