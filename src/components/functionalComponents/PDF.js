@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import { Page, Text, Document, Image, StyleSheet } from '@react-pdf/renderer';
-import { SocialIcon } from 'react-social-icons';
+import { Page, Text, Document, StyleSheet } from '@react-pdf/renderer';
+//import { SocialIcon } from 'react-social-icons';
 
 const API_KEY = "AIzaSyDggZlSpjNNce614YxmnzLWCBm7QbN_-3A"
 
