@@ -1,6 +1,6 @@
 
 import PDF from "./PDF"
-import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
+import { PDFDownloadLink} from '@react-pdf/renderer';
 
 const dlPDF = (props) => (
   <div>

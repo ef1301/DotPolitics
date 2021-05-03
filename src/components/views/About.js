@@ -9,7 +9,7 @@ const About = () => {
     <>
     <div className="about-banner" >
     <img id="about-logo" src={logo} alt = "DotPolitic logo"></img>
-    <Card className="about-banner" style={{ width: '60rem' }} tabIndex='0'>
+    <Card className="about-banner"  tabIndex='0'>
         <Card.Body>
         <Card.Title><h2>About Us</h2></Card.Title>
         <Card.Text aria-label="Description of what DotPolitics is.">
@@ -24,8 +24,8 @@ const About = () => {
     </Card>
     </div>
     <div className="about-team" tabIndex='0'>
-    <Card className="about-team" style={{ width: '40rem' }}>
-    <h2 class="card-header">Meet the Team</h2> <br></br>
+    <Card className="about-team" >
+    <h2 className="card-header">Meet the Team</h2> <br></br>
     <ListGroup variant="flush">
     <ListGroup.Item>Andrew Zhu</ListGroup.Item>
     <ListGroup.Item>Chengdong Ruan</ListGroup.Item>

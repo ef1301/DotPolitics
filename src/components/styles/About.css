@@ -12,12 +12,12 @@
     font-weight: bold;
 }
 
-about-logo {
-    align-items: center;
+#about-logo {
+    height: 15vh;
 }
 
 .about-banner {
-    width: 100%;
+    width: 90vw;
     margin: 5vh auto;
     text-align: center;
 }
