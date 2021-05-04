@@ -42,7 +42,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    top:7%;
+    top:10%;
 }
 .name{
     position: absolute;
@@ -147,7 +147,7 @@
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        top:5%;
+        top:14%;
     }
     .secondname{
         font-size: calc(0.5rem + 0.5vw);
@@ -214,6 +214,18 @@
         font-style: normal;
         font-weight: normal;
     }
+    .party{
+        position: -webkit-sticky;
+        width: 30%;
+    
+        font-size: 30%;
+        color:black;
+        left: 13%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:15%;
+    }
   }
 
   @media only screen and (max-width: 352px) {
@@ -224,11 +236,9 @@
         height: 100%;
         text-align: center;
         justify-content: flex-start;
-        font-size: 25%;
-
-       
-        
+        font-size: 25%;    
     }
+
     .name{
         position: -webkit-sticky;
         text-align: center;
@@ -244,15 +254,14 @@
     }
     .party{
         position: -webkit-sticky;
-        width: 50%;
-    
+        width: 35%;
         font-size: 30%;
         color:black;
-        left: 6%;
+        left: 14%;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        top:3%;
+        top:15%;
     }
     .secondname{
         font-size: calc(0.5rem + 0.5vw);
@@ -323,7 +332,7 @@
     }
     .party{
         position: -webkit-sticky;
-        width: 50%;
+        width: 40%;
     
         font-size: 30%;
         color:black;
@@ -331,14 +340,14 @@
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        top:-12%;
+        top: -1%;
     }
     .secondname{
         font-size: calc(0.5rem + 0.5vw);
         position: -webkit-sticky;
         text-align: center;
         justify-content: center;
-        left: 28%;
+        left: 25%;
         top: 18%;
         width: 70%;
         font-family: Roboto;
@@ -358,12 +367,26 @@
         bottom:2%;
         color: #000000; 
     }
+    .link{
+        position: -webkit-sticky;
+        width: 42%;
+        height: 30%;
+    
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 5%;
+        line-height: 150%;
+        left: 53%;
+        bottom: 23%;
+        color: #000000;
+        }
     .website{
         position: absolute      ;
         justify-content: flex-end;
         width: 15%;
         height: 10%;
-        left: 85%;
+        left: 75%;
         bottom: 13%;
         transform: scale(1);
     }

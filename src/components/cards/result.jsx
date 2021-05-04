@@ -16,7 +16,7 @@ const ResultCard = (props) => {
         <Card className="resultCard">
 
             <div className="party"tabIndex='0'>
-            <Card.Header>{officials.party}</Card.Header>
+            {officials.party}
             </div> 
             
             <Card.Body>
