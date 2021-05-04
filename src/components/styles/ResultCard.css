@@ -100,13 +100,14 @@
 .website{
     position: absolute;
     justify-content: flex-end;
-    width: 233px;
+    width: 3%;
     height: 10%;
-    right: 5%;
-    bottom: 25%;
+    right: 10%;
+    bottom: 18%;
+    transform: scale(3);
   
 }
-@media (max-width: 1096px) {
+@media only screen and (max-width: 1500px) {
     .image{
         position: -webkit-sticky;
         width: 20%;
@@ -115,6 +116,7 @@
         text-align: center;
         justify-content: flex-start;
         font-size: 30%;
+       
         
     }
     .name{
@@ -122,17 +124,17 @@
         text-align: center;
         justify-content:space-around ;
         font-size: 30%;
-        left: 20%;
+        left: 21%;
         width: 50%;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        top:20%;
+        top:15%;
         
     }
     .party{
         position: -webkit-sticky;
-        width: 50%;
+        width: 45%;
     
         font-size: 30%;
         color:black;
@@ -140,16 +142,16 @@
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        top:10%;
+        top:5%;
     }
     .secondname{
-        font-size: 10px;
+        font-size: calc(0.5rem + 0.5vw);
         position: -webkit-sticky;
         text-align: center;
         justify-content: center;
-        right: 5%;
-        top: 35%;
-        width: 70%;
+        left: 30%;
+        top: 30%;
+        width: 40%;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -186,11 +188,10 @@
     .website{
         position: absolute      ;
         justify-content: flex-end;
-        width: 30%;
+        width: 15%;
         height: 10%;
         left: 80%;
         bottom: 9%;
-        size: 10%;
-        
+        transform: scale(1);
     }
   }
