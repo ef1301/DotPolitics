@@ -271,7 +271,7 @@
         font-weight: normal;
         font-size: 30%;
         line-height: 150%;
-        left: 26%;
+        left: 27%;
         bottom:2%;
         color: #000000; 
     }
@@ -297,6 +297,69 @@
         height: 10%;
         left: 85%;
         bottom: 12%;
+        transform: scale(1);
+    }
+  }
+
+  @media only screen and (max-width: 319px) {
+
+    .name{
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content:space-around ;
+        font-size: 10%;
+        left:-3%;
+        width: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:-1%;
+        
+    }
+    .party{
+        position: -webkit-sticky;
+        width: 50%;
+    
+        font-size: 30%;
+        color:black;
+        left: -5%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:-12%;
+    }
+    .secondname{
+        font-size: calc(0.5rem + 0.5vw);
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content: center;
+        left: 28%;
+        top: 18%;
+        width: 70%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+    .phone{
+        position: -webkit-sticky;
+        width: 30%;
+        height: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30%;
+        line-height: 150%;
+        left: 28%;
+        bottom:2%;
+        color: #000000; 
+    }
+    .website{
+        position: absolute      ;
+        justify-content: flex-end;
+        width: 15%;
+        height: 10%;
+        left: 85%;
+        bottom: 13%;
         transform: scale(1);
     }
   }
