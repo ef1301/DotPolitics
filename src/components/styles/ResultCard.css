@@ -4,7 +4,7 @@
 }
 
 .resultCard {
-    width: 90vw;
+    width: 100%;
     margin: auto;
 }
 
@@ -18,42 +18,56 @@
     object-fit: cover;
     object-position: center center;
 }
-
-.image{
-    width: 282px;
-    height: 323px;
+.search{
     position: relative;
-    font-size: 18px;
-    bottom: 20px;
+    font-size: 200%;
+}
+.image{
+    position: relative;
+    width: 15em;
+    height: 100%;
+    text-align: center;
+    justify-content: flex-start;
+    font-size: 100%;
+    
 }
 
 .party{
     position: absolute;
-    width: 225px;
+    width: 400px;
     height: 56px;
-    font-size: 21px;
+    font-size: calc(1.0rem + 1vw);
     color:black;
-    margin-left:780px;
+    margin-left:50%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    top: 30px;
+    top:10%;
 }
 .name{
     position: absolute;
-    font-size: 48px; 
-    width: 490px;
-    height: 55px;
-    left: 350px;
-    bottom: 290px;
+    text-align: center;
+    justify-content:space-around ;
+    font-size: 200%;
+    left: 25%;
+    width: 25%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    bottom: 75%;
+    
 }
 .secondname{
-    font-size: 36px; 
+    font-size: calc(1.2rem + 1vw);
     position: absolute;
-    width: 1200px;
-    height: 56px;
-    left: 350px;
-    bottom: 220px;
+    text-align: center;
+    justify-content: center;
+    right: 35%;
+    top: 30%;
+    width: 50%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .phone{
@@ -63,33 +77,317 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: calc(1.2rem + 1vw);
     line-height: 56px;
-    left: 350px;
-    bottom: 110px;
+    left: 21%;
+    bottom: 25%;
     color: #000000; 
 }
 
 
 .link{
     position: absolute;
-    width: 700px;
+    width: 50%;
     height: 56px;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: calc(1.2rem + 1vw);
     line-height: 56px;
-    left: 750px;
-    bottom: 135px;
+    left: 40%;
+    bottom: 33%;
     color: #000000;
 }
 
 .website{
     position: absolute;
-    width: 233px;
-    height: 50px;
-    right: 10px;
-    bottom: 130px;
+    justify-content: flex-end;
+    width: 3%;
+    height: 10%;
+    right: 10%;
+    bottom: 18%;
+    transform: scale(3);
+  
 }
+@media only screen and (max-width: 1500px) {
+    .search{
+        position: relative;
+        font-size: 100%;
+    }
+    .image{
+        position: -webkit-sticky;
+        width: 20%;
+        left: -2%;
+        height: 100%;
+        text-align: center;
+        justify-content: flex-start;
+        font-size: 30%;      
+    }
+    .name{
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content:space-around ;
+        font-size: 10%;
+        left: 21%;
+        width: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:15%;
+        
+    }
+    .party{
+        position: -webkit-sticky;
+        width: 45%;
+    
+        font-size: 30%;
+        color:black;
+        left: 8%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:14%;
+    }
+    .secondname{
+        font-size: calc(0.5rem + 0.5vw);
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content: center;
+        left: 30%;
+        top: 30%;
+        width: 40%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .phone{
+        position: -webkit-sticky;
+        width: 30%;
+        height: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30%;
+        line-height: 150%;
+        left: 28%;
+        bottom:-5%;
+        color: #000000; 
+    }
+    
+    .link{
+    position: -webkit-sticky;
+    width: 42%;
+    height: 30%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5%;
+    line-height: 150%;
+    left: 56%;
+    bottom: 15%;
+    color: #000000;
+    }
+    .website{
+        position: absolute      ;
+        justify-content: flex-end;
+        width: 15%;
+        height: 10%;
+        left: 80%;
+        bottom: 9%;
+        transform: scale(1);
+    }
+  }
+
+  @media only screen and (max-width: 560px) {
+    .secondname{
+        font-size: calc(0.5rem + 0.5vw);
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content: center;
+        left: 30%;
+        top: 30%;
+        width: 70%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+    .party{
+        position: -webkit-sticky;
+        width: 30%;
+    
+        font-size: 30%;
+        color:black;
+        left: 13%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:15%;
+    }
+  }
+
+  @media only screen and (max-width: 352px) {
+    .image{
+        position: -webkit-sticky;
+        width: 20%;
+        left: -2%;
+        height: 100%;
+        text-align: center;
+        justify-content: flex-start;
+        font-size: 25%;    
+    }
+
+    .name{
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content:space-around ;
+        font-size: 10%;
+        left: 19%;
+        width: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:15%;
+        
+    }
+    .party{
+        position: -webkit-sticky;
+        width: 35%;
+        font-size: 30%;
+        color:black;
+        left: 14%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:15%;
+    }
+    .secondname{
+        font-size: calc(0.5rem + 0.5vw);
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content: center;
+        left: 28%;
+        top: 30%;
+        width: 70%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .phone{
+        position: -webkit-sticky;
+        width: 30%;
+        height: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30%;
+        line-height: 150%;
+        left: 27%;
+        bottom:2%;
+        color: #000000; 
+    }
+    
+    .link{
+    position: -webkit-sticky;
+    width: 42%;
+    height: 30%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5%;
+    line-height: 150%;
+    left: 56%;
+    bottom: 23%;
+    color: #000000;
+    }
+    .website{
+        position: absolute      ;
+        justify-content: flex-end;
+        width: 15%;
+        height: 10%;
+        left: 85%;
+        bottom: 12%;
+        transform: scale(1);
+    }
+  }
+
+  @media only screen and (max-width: 319px) {
+
+    .name{
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content:space-around ;
+        font-size: 10%;
+        left:-3%;
+        width: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top:-1%;
+        
+    }
+    .party{
+        position: -webkit-sticky;
+        width: 40%;
+    
+        font-size: 30%;
+        color:black;
+        left: -5%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        top: -1%;
+    }
+    .secondname{
+        font-size: calc(0.5rem + 0.5vw);
+        position: -webkit-sticky;
+        text-align: center;
+        justify-content: center;
+        left: 25%;
+        top: 18%;
+        width: 70%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+    .phone{
+        position: -webkit-sticky;
+        width: 30%;
+        height: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30%;
+        line-height: 150%;
+        left: 28%;
+        bottom:2%;
+        color: #000000; 
+    }
+    .link{
+        position: -webkit-sticky;
+        width: 42%;
+        height: 30%;
+    
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 5%;
+        line-height: 150%;
+        left: 53%;
+        bottom: 23%;
+        color: #000000;
+        }
+    .website{
+        position: absolute      ;
+        justify-content: flex-end;
+        width: 15%;
+        height: 10%;
+        left: 75%;
+        bottom: 13%;
+        transform: scale(1);
+    }
+  }

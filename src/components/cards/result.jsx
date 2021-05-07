@@ -16,7 +16,7 @@ const ResultCard = (props) => {
         <Card className="resultCard">
 
             <div className="party"tabIndex='0'>
-            <Card.Header>{officials.party}</Card.Header>
+            {officials.party}
             </div> 
             
             <Card.Body>
@@ -49,10 +49,10 @@ const ResultCard = (props) => {
             {officials.channels ? officials.channels.map((channel, index) => {
                             if(channel.type === "Twitter") {
                                 const link = "https://twitter.com/" + channel.id;
-                                return(<SocialIcon key={index} url={link}  />);
+                                return(<SocialIcon key={index} style={{ height: 20, width: 20 }} url={link}  />);
                             } else if (channel.type === "Facebook") {
                                 const link = "https://facebook.com/" + channel.id;
-                                return(<SocialIcon key={index} url={link} />);
+                                return(<SocialIcon key={index}style={{ height: 20, width: 20 }} url={link} />);
                             } else return <></>;
                         }) :
                         <p></p>
