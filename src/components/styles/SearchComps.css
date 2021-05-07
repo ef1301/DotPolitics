@@ -1,6 +1,21 @@
 #search-bar {
     width: 90vw;
     margin: 5vh auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+form {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#search-query {
+    width: 80vw;
+}
+
+#search-bar form {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .btn.btn-primary {

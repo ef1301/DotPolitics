@@ -58,10 +58,13 @@ class SearchBar extends Component {
                     <Form onSubmit={this.handleSubmit}>
                     <Form.Label id="searchbar-label">Enter your location or hit the Location button:</Form.Label>
                     <InputGroup >
-                        <FormControl value={query} onChange={this.handleQuery} 
+                    <Form.Group>
+                    <FormControl id="search-query" value={query} onChange={this.handleQuery} 
                             placeholder="Enter Location Here" 
                             aria-label="Search Bar" 
                         />
+                    </Form.Group>
+
 
                     <Form.Group>
                     <DropdownButton
