@@ -4,18 +4,18 @@
     display: flex;
     flex-flow: row wrap;
 }
-form {
-    display: flex;
-    flex-flow: row wrap;
-}
 
 #search-query {
-    width: 80vw;
+    width: 65vw;
 }
 
 #search-bar form {
     display: flex;
     flex-flow: row wrap;
+}
+
+.input-group {
+    justify-content: center;
 }
 
 .btn.btn-primary {
