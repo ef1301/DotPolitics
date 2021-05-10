@@ -21,6 +21,7 @@
 .search{
     position: relative;
     font-size: 200%;
+    left: 5%;
 }
 .image{
     position: relative;
@@ -49,7 +50,7 @@
     text-align: center;
     justify-content:space-around ;
     font-size: 200%;
-    left: 25%;
+    left: 19%;
     width: 25%;
     font-family: Roboto;
     font-style: normal;
@@ -87,9 +88,8 @@
 
 .link{
     position: absolute;
-    width: 50%;
+    width: 40%;
     height: 56px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -104,13 +104,13 @@
     position: absolute;
     justify-content: flex-end;
     width: 3%;
-    height: 10%;
-    right: 10%;
+    height: 40%;
+    right: 5%;
     bottom: 18%;
     transform: scale(3);
   
 }
-@media only screen and (max-width: 1396px) {
+@media only screen and (max-width: 1366px) {
     .search{
         position: relative;
         font-size: 100%;
@@ -130,23 +130,17 @@
         justify-content:space-around ;
         font-size: 10%;
         left: 21%;
-        width: 50%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
+        width: 50%;  
         top:15%;
         
     }
     .party{
         position: -webkit-sticky;
-        width: 45%;
-    
+        width: 45%; 
         font-size: 30%;
         color:black;
         left: 8%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
+      
         top:14%;
     }
     .secondname{
@@ -157,18 +151,13 @@
         left: 30%;
         top: 30%;
         width: 40%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
+       
     }
 
     .phone{
         position: -webkit-sticky;
         width: 30%;
         height: 50%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         font-size: 30%;
         line-height: 150%;
         left: 28%;
@@ -180,10 +169,6 @@
     position: -webkit-sticky;
     width: 42%;
     height: 30%;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 5%;
     line-height: 150%;
     left: 56%;
@@ -194,8 +179,8 @@
         position: absolute      ;
         justify-content: flex-end;
         width: 15%;
-        height: 10%;
-        left: 80%;
+        height: 80%;
+        left: 85%;
         bottom: 9%;
         transform: scale(1);
     }
@@ -210,21 +195,23 @@
         left: 30%;
         top: 30%;
         width: 70%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
     }
     .party{
         position: -webkit-sticky;
         width: 30%;
-    
         font-size: 30%;
         color:black;
         left: 13%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         top:15%;
+    }
+    .website{
+        position: absolute      ;
+        justify-content: flex-end;
+        width: 15%;
+        height: 45%;
+        left: 85%;
+        bottom: 9%;
+        transform: scale(1);
     }
   }
 
@@ -246,9 +233,6 @@
         font-size: 10%;
         left: 19%;
         width: 50%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         top:15%;
         
     }
@@ -258,9 +242,6 @@
         font-size: 30%;
         color:black;
         left: 14%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         top:15%;
     }
     .secondname{
@@ -271,18 +252,12 @@
         left: 28%;
         top: 30%;
         width: 70%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
     }
 
     .phone{
         position: -webkit-sticky;
         width: 30%;
         height: 50%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         font-size: 30%;
         line-height: 150%;
         left: 27%;
@@ -294,10 +269,6 @@
     position: -webkit-sticky;
     width: 42%;
     height: 30%;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 5%;
     line-height: 150%;
     left: 56%;
@@ -308,7 +279,7 @@
         position: absolute      ;
         justify-content: flex-end;
         width: 15%;
-        height: 10%;
+        height: 45%;
         left: 85%;
         bottom: 12%;
         transform: scale(1);
@@ -324,22 +295,15 @@
         font-size: 10%;
         left:-3%;
         width: 50%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         top:-1%;
         
     }
     .party{
         position: -webkit-sticky;
         width: 40%;
-    
         font-size: 30%;
         color:black;
         left: -5%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         top: -1%;
     }
     .secondname{
@@ -350,17 +314,11 @@
         left: 25%;
         top: 18%;
         width: 70%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
     }
     .phone{
         position: -webkit-sticky;
         width: 30%;
         height: 50%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         font-size: 30%;
         line-height: 150%;
         left: 28%;
@@ -371,10 +329,6 @@
         position: -webkit-sticky;
         width: 42%;
         height: 30%;
-    
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
         font-size: 5%;
         line-height: 150%;
         left: 53%;
@@ -385,7 +339,7 @@
         position: absolute      ;
         justify-content: flex-end;
         width: 15%;
-        height: 10%;
+        height: 50%;
         left: 75%;
         bottom: 13%;
         transform: scale(1);
