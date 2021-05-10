@@ -21,7 +21,7 @@ function App() {
           <Switch>   
             <Route exact path='/' component={Home} />
             <Route exact path='/search/' component={Search}/>
-            <Route exact path='/search/Representatives/:query' children={(props) => <><SearchBar/><RepByLocation {...props}/> <PDFDownload {...props}/></>} />
+            <Route exact path='/search/Representatives/:query' children={(props) => <><SearchBar/> <PDFDownload {...props}/><RepByLocation {...props}/></>} />
             <Route exact path='/search/Polls/:query' children={(props) => <><SearchBar/><PollByLocation {...props}/></>}/>
             <Route exact path='/About' component={About}/>
           </Switch>
