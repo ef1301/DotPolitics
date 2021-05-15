@@ -18,11 +18,13 @@
     object-fit: cover;
     object-position: center center;
 }
+
 .search{
     position: relative;
     font-size: 200%;
     left: 5%;
 }
+
 .pdf{
     position: absolute;
     left: 90%;
@@ -30,6 +32,7 @@
     font-style: normal;
     font-weight: normal;
 }
+
 .image{
     position: relative;
     width: 15em;
@@ -154,7 +157,7 @@
         top:14%;
     }
     .secondname{
-        font-size: calc(0.5rem + 0.5vw);
+        font-size: 30%;
         position: -webkit-sticky;
         text-align: center;
         justify-content: center;
