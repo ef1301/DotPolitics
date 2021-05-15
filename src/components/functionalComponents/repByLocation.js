@@ -78,19 +78,16 @@ const RepByLocation = (props) => {
         let federal = false;
 
         function handleChange_Local(e) {
-            if(local_checked === true) { setLocal(local_checked => false) }
-            else {setLocal(local_checked => true)}
+            (local_checked === true) ? setLocal(local_checked => false) : setLocal(local_checked => true);
             //console.log(local_checked);
           }
           function handleChange_State(e) {
-            if(state_checked === true) {setState(state_checked => false)}
-            else {setState(state_checked => true)}
+            (state_checked === true) ? setState(state_checked => false): setState(state_checked => true);
             //console.log(state_checked);
           }
           function handleChange_Federal(e) {
-            if(federal_checked === true) {setFederal(Federal_checked => false)}
-            else {setFederal(Federal_checked => true)}
-            //console.log(federal_checked);
+            (federal_checked === true) ? setFederal(Federal_checked => false) : setFederal(Federal_checked => true);
+            console.log(federal_checked);
           }
             let row1= items.map((item,index) => {
                 if(local_checked === true){
@@ -116,21 +113,20 @@ const RepByLocation = (props) => {
             });
             return(
                <> 
-        <div>
+            <div>
             <br /><p class='text-center'>
                 {"Show level of government: "}
                 <label>
-                    <input type="checkbox" id="show_local_results" value="Local"  onChange = {handleChange_Local} defaultChecked/> {"Local   "}
+                    <input type="checkbox" id="=local_results" value="Local"  onChange = {handleChange_Local} defaultChecked/> {"Local   "}
                 </label> <> </>
                 <label>
-                    <input type="checkbox" id="show_state_results" value="State"  onChange = {handleChange_State} defaultChecked/> {"State   "}
+                    <input type="checkbox" id="=state_results" value="State"  onChange = {handleChange_State} defaultChecked/> {"State   "}
                 </label> <> </>
                 <label>
-                    <input type="checkbox" id="show_federal_results" value="Federal" onChange = {handleChange_Federal} defaultChecked/> {"Federal   "}
+                    <input type="checkbox" id="federal_results" value="Federal" onChange = {handleChange_Federal} defaultChecked/> {"Federal   "}
                 </label> 
             </p>
         </div>
-
         <h1 className="search">Search Results for: {decodeURIComponent(query)}</h1>
         {row3}
         {row2}
