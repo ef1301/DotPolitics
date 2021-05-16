@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/DotPolitics/static/css/main.a8ea8fb8.chunk.css",
+    "main.js": "/DotPolitics/static/js/main.f772bbca.chunk.js",
+    "main.js.map": "/DotPolitics/static/js/main.f772bbca.chunk.js.map",
+    "runtime-main.js": "/DotPolitics/static/js/runtime-main.bf666121.js",
+    "runtime-main.js.map": "/DotPolitics/static/js/runtime-main.bf666121.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/DotPolitics/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.6d6e1de7.chunk.js": "/DotPolitics/static/js/2.6d6e1de7.chunk.js",
+    "static/js/2.6d6e1de7.chunk.js.map": "/DotPolitics/static/js/2.6d6e1de7.chunk.js.map",
+    "static/js/3.83299c52.chunk.js": "/DotPolitics/static/js/3.83299c52.chunk.js",
+    "static/js/3.83299c52.chunk.js.map": "/DotPolitics/static/js/3.83299c52.chunk.js.map",
+    "index.html": "/DotPolitics/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/DotPolitics/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.a8ea8fb8.chunk.css.map": "/DotPolitics/static/css/main.a8ea8fb8.chunk.css.map",
+    "static/js/2.6d6e1de7.chunk.js.LICENSE.txt": "/DotPolitics/static/js/2.6d6e1de7.chunk.js.LICENSE.txt",
+    "static/media/About.css": "/DotPolitics/static/media/bill.a802e74d.jpg",
+    "static/media/logo_white.c0dbc975.png": "/DotPolitics/static/media/logo_white.c0dbc975.png",
+    "static/media/pfp.32fd6d97.png": "/DotPolitics/static/media/pfp.32fd6d97.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf666121.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.6d6e1de7.chunk.js",
+    "static/css/main.a8ea8fb8.chunk.css",
+    "static/js/main.f772bbca.chunk.js"
+  ]
+}
