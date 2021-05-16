@@ -13,7 +13,6 @@ const PollByLocation = (props) => {
     const query = props.match.params.query;
     React.useEffect(() => {
         fetch(`https://www.googleapis.com/civicinfo/v2/voterinfo?key=${key}&address=${query}`)
-        //&returnAllAvailableData=true
         .then(res => res.json())
         .then(
             (result) => {
@@ -52,7 +51,6 @@ const PollByLocation = (props) => {
             {successful_poll.pollingLocations.map((item, index) =>
                 <ResultCardPoll key={index} item={item}/>
             )}
-            {console.log(successful_poll)}
         </Card.Body>
         </Card></div>);
     } else if(!isLoaded) {
