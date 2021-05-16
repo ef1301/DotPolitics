@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/DotPolitics/static/css/main.a8ea8fb8.chunk.css",
-    "main.js": "/DotPolitics/static/js/main.b984a0be.chunk.js",
-    "main.js.map": "/DotPolitics/static/js/main.b984a0be.chunk.js.map",
+    "main.js": "/DotPolitics/static/js/main.90b674b6.chunk.js",
+    "main.js.map": "/DotPolitics/static/js/main.90b674b6.chunk.js.map",
     "runtime-main.js": "/DotPolitics/static/js/runtime-main.eda43ac4.js",
     "runtime-main.js.map": "/DotPolitics/static/js/runtime-main.eda43ac4.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/DotPolitics/static/css/2.4c97ca4f.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.0a6b847c.chunk.js",
     "static/css/main.a8ea8fb8.chunk.css",
-    "static/js/main.b984a0be.chunk.js"
+    "static/js/main.90b674b6.chunk.js"
   ]
 }
