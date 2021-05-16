@@ -19,11 +19,11 @@ function App() {
       <Router>
       <Navbar />
           <Switch>   
-            <Route exact path='/' component={Home} />
-            <Route exact path='/search/' component={Search}/>
-            <Route exact path='/search/Representatives/:query' children={(props) => <><SearchBar/> <PDFDownload {...props}/><RepByLocation {...props}/></>} />
-            <Route exact path='/search/Polls/:query' children={(props) => <><SearchBar/><PollByLocation {...props}/></>}/>
-            <Route exact path='/About' component={About}/>
+            <Route exact path='/DotPolitics' component={Home} />
+            <Route exact path='/DotPolitics/search/' component={Search}/>
+            <Route exact path='/DotPolitics/search/Representatives/:query' children={(props) => <><SearchBar/> <PDFDownload {...props}/><RepByLocation {...props}/></>} />
+            <Route exact path='/DotPolitics/search/Polls/:query' children={(props) => <><SearchBar/><PollByLocation {...props}/></>}/>
+            <Route exact path='/DotPolitics/About' component={About}/>
           </Switch>
       </Router>
       <Footer/>
