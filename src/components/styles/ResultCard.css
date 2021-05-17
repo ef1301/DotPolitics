@@ -23,6 +23,7 @@
     position: relative;
     font-size: 200%;
     left: 5%;
+    width:50%;
 }
 
 .pdf{
@@ -31,7 +32,10 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
+    border: none;
+    color: white;  
 }
+
 
 .image{
     position: relative;
@@ -40,7 +44,6 @@
     text-align: center;
     justify-content: flex-start;
     font-size: 100%;
-    
 }
 
 .party{
@@ -118,8 +121,9 @@
     right: 5%;
     bottom: 18%;
     transform: scale(3);
-  
 }
+
+
 @media only screen and (max-width: 1366px) {
     .search{
         position: relative;
@@ -143,7 +147,7 @@
         position: -webkit-sticky;
         text-align: center;
         justify-content:space-around ;
-        font-size: 10%;
+        font-size: 70%;
         left: 9%;
         width: 50%;  
         top:15%;
@@ -151,13 +155,13 @@
     .party{
         position: -webkit-sticky;
         width: 35%; 
-        font-size: 30%;
+        font-size: 70%;
         color:black;
         left: -1%;
         top:14%;
     }
     .secondname{
-        font-size: 30%;
+        font-size: 70%;
         position: -webkit-sticky;
         text-align: center;
         justify-content: center;
@@ -171,7 +175,7 @@
         position: -webkit-sticky;
         width: 30%;
         height: 50%;
-        font-size: 30%;
+        font-size: 70%;
         line-height: 150%;
         left: 28%;
         bottom:-5%;
@@ -182,7 +186,7 @@
     position: -webkit-sticky;
     width: 42%;
     height: 30%;
-    font-size: 5%;
+    font-size: 70%;
     line-height: 150%;
     left: 56%;
     bottom: 15%;
@@ -209,13 +213,13 @@
         position: -webkit-sticky;
         text-align: center;
         justify-content:space-around ;
-        font-size: 10%;
+        font-size: 70%;
         left: 17%;
         width: 50%;  
         top:15%;
     }
     .secondname{
-        font-size: calc(0.5rem + 0.5vw);
+        font-size: 70%;
         position: -webkit-sticky;
         text-align: center;
         justify-content: center;
@@ -226,7 +230,7 @@
     .party{
         position: -webkit-sticky;
         width: 30%;
-        font-size: 30%;
+        font-size: 70%;
         color:black;
         left: 13%;
         top:15%;
@@ -246,7 +250,7 @@
     .pdf{
         position: absolute;
         left: 70%;
-        font-size: 50%;
+        font-size:70%;
         width: 30%;
         bottom: 55%;
     }
@@ -264,7 +268,7 @@
         position: -webkit-sticky;
         text-align: center;
         justify-content:space-around ;
-        font-size: 10%;
+        font-size: 70%;
         left: 19%;
         width: 50%;
         top:15%;
@@ -273,13 +277,13 @@
     .party{
         position: -webkit-sticky;
         width: 35%;
-        font-size: 30%;
+        font-size: 70%;
         color:black;
         left: 14%;
         top:15%;
     }
     .secondname{
-        font-size: calc(0.5rem + 0.5vw);
+        font-size: 70%;
         position: -webkit-sticky;
         text-align: center;
         justify-content: center;
@@ -292,7 +296,7 @@
         position: -webkit-sticky;
         width: 30%;
         height: 50%;
-        font-size: 30%;
+        font-size: 70%;
         line-height: 150%;
         left: 27%;
         bottom:2%;
@@ -303,7 +307,7 @@
     position: -webkit-sticky;
     width: 42%;
     height: 30%;
-    font-size: 5%;
+    font-size: 70%;
     line-height: 150%;
     left: 56%;
     bottom: 23%;
@@ -348,7 +352,7 @@
         position: -webkit-sticky;
         text-align: center;
         justify-content:space-around ;
-        font-size: 10%;
+        font-size: 70%;
         left:-3%;
         width: 50%;
         top:-1%;
@@ -357,13 +361,13 @@
     .party{
         position: -webkit-sticky;
         width: 40%;
-        font-size: 30%;
+        font-size: 70%;
         color:black;
         left: -5%;
         top: -1%;
     }
     .secondname{
-        font-size: calc(0.5rem + 0.5vw);
+        font-size:70%;
         position: -webkit-sticky;
         text-align: center;
         justify-content: center;
@@ -375,21 +379,19 @@
         position: -webkit-sticky;
         width: 30%;
         height: 50%;
-        font-size: 30%;
+        font-size: 70%;
         line-height: 150%;
         left: 28%;
         bottom:2%;
-        color: #000000; 
     }
     .link{
         position: -webkit-sticky;
         width: 42%;
         height: 30%;
-        font-size: 5%;
+        font-size: 70%;
         line-height: 150%;
         left: 53%;
         bottom: 23%;
-        color: #000000;
         }
     .website{
         position: absolute      ;
