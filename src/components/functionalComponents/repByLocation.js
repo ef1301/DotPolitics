@@ -36,7 +36,7 @@ const RepByLocation = (props) => {
                         );
                         result.offices.map(office => 
                             office.officialIndices.map(index =>
-                                newItems[index].levels = office.levels,
+                                newItems[index].levels = office.levels
                             ),
                         );
                        result.offices.map(office => 
