@@ -91,8 +91,8 @@ const RepByLocation = (props) => {
           }
             let row1= items.map((item,index) => {
                 if(local_checked === true){
-                    while(item.divisionId.includes("county") && local === false ){local =true;return <><h1 aria-label= "Local">Local</h1> <br></br><ResultCard  key={index} item={item}/></>;}
-                    if(item.divisionId.includes("county") && local === true ){return <> <br></br><ResultCard  key={index} item={item}/></>;} 
+                    if(item.divisionId.includes("county") && local === false ){local =true;return <><h1 aria-label= "Local">Local</h1> <br></br><ResultCard  key={index} item={item}/></>;}
+                    else if(item.divisionId.includes("county") && local === true ){return <> <br></br><ResultCard  key={index} item={item}/></>;} 
                 } 
                 else{return <> </> }
             });
