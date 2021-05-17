@@ -87,18 +87,18 @@ const RepByLocation = (props) => {
           }
           function handleChange_Federal(e) {
             (federal_checked === true) ? setFederal(Federal_checked => false) : setFederal(Federal_checked => true);
-            console.log(federal_checked);
+            //console.log(federal_checked);
           }
             let row1= items.map((item,index) => {
                 if(local_checked === true){
-                    while(item.divisionId.includes("county") && local === false ){local =true;return <><h1>Local</h1> <br></br><ResultCard  key={index} item={item}/></>;}
+                    while(item.divisionId.includes("county") && local === false ){local =true;return <><h1 aria-label= "Local">Local</h1> <br></br><ResultCard  key={index} item={item}/></>;}
                     if(item.divisionId.includes("county") && local === true ){return <> <br></br><ResultCard  key={index} item={item}/></>;} 
                 } 
                 else{return <> </> }
             });
             let row2 = items.map((item,index) => {
                 if(state_checked === true){
-                    if (item.divisionId.includes("state") && state === false ){state =true;return <><h1>State</h1><br></br><ResultCard  key={index} item={item}/></>;} 
+                    if (item.divisionId.includes("state") && state === false ){state =true;return <><h1 aria-label= "State" >State</h1><br></br><ResultCard  key={index} item={item}/></>;} 
                     else if(item.divisionId.includes("state") && !item.divisionId.includes("county") ){return <> <br></br><ResultCard  key={index} item={item}/></>;} 
                 } 
                 else{ return <> </> }
@@ -106,24 +106,24 @@ const RepByLocation = (props) => {
             });
             let row3 = items.map((item,index) => {
                 if (federal_checked === true){
-                    if(item.divisionId.includes("us") && federal === false ){federal =true;return <><h1>Federal</h1> <ResultCard  key={index} item={item}/></>;} 
-                    if(item.divisionId.includes("us") && !item.divisionId.includes("state") ){return <><ResultCard  key={index} item={item}/></>}
+                    if(item.divisionId.includes("us") && federal === false ){federal =true;return <><h1 aria-label= "Federal">Federal</h1> <ResultCard  key={index} item={item}/></>;} 
+                    else if(item.divisionId.includes("us") && !item.divisionId.includes("state") ){return <><ResultCard  key={index} item={item}/></>}
                 }
                 else{return <> </> }
             });
             return(
                <> 
             <div>
-            <br /><p class='text-center'>
+            <br /><p class='text-center' aria-label= "Show level of government">
                 {"Show level of government: "}
                 <label>
-                    <input type="checkbox" id="=local_results" value="Local"  onChange = {handleChange_Local} defaultChecked/> {"Local   "}
+                    <input type="checkbox" id="=local_results" value="Local" aria-label= "Show local results" onChange = {handleChange_Local} defaultChecked/> {"Local   "}
                 </label> <> </>
                 <label>
-                    <input type="checkbox" id="=state_results" value="State"  onChange = {handleChange_State} defaultChecked/> {"State   "}
+                    <input type="checkbox" id="=state_results" value="State"  aria-label="Show State results" onChange = {handleChange_State} defaultChecked/> {"State   "}
                 </label> <> </>
                 <label>
-                    <input type="checkbox" id="federal_results" value="Federal" onChange = {handleChange_Federal} defaultChecked/> {"Federal   "}
+                    <input type="checkbox" id="federal_results" value="Federal" aria-label="Show State results"  onChange = {handleChange_Federal} defaultChecked/> {"Federal   "}
                 </label> 
             </p>
         </div>
