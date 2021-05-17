@@ -102,7 +102,7 @@ const RepByLocation = (props) => {
                     else if(item.divisionId.includes("state") && !item.divisionId.includes("county") ){return <> <br></br><ResultCard  key={index} item={item}/></>;} 
                 } 
                 else{ return <> </> }
-            
+        
             });
             let row3 = items.map((item,index) => {
                 if (federal_checked === true){
