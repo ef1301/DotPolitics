@@ -36,7 +36,7 @@ const RepByLocation = (props) => {
                         );
                         result.offices.map(office => 
                             office.officialIndices.map(index =>
-                                newItems[index].levels = office.levels,
+                                newItems[index].levels = office.levels
                             ),
                         );
                        result.offices.map(office => 
@@ -89,7 +89,7 @@ const RepByLocation = (props) => {
             (federal_checked === true) ? setFederal(Federal_checked => false) : setFederal(Federal_checked => true);
             //console.log(federal_checked);
           }
-            let row1= items.map((item,index) => {
+            let row1 = items.map((item,index) => {
                 if(local_checked === true){
                     if(item.divisionId.includes("county") && local === false ){local =true;return <><h1 aria-label= "Local">Local</h1> <br></br><ResultCard  key={index} item={item}/></>;}
                     else if(item.divisionId.includes("county") && local === true ){return <> <br></br><ResultCard  key={index} item={item}/></>;} 
@@ -114,7 +114,7 @@ const RepByLocation = (props) => {
             return(
                <> 
             <div>
-            <br /><p class='text-center' >
+            <br /><p className='text-center'>
                 {"Show level of government: "}
                 <label>
                     <input type="checkbox" id="=local_results" value="Local" aria-label= "Show local results" onChange = {handleChange_Local} defaultChecked/> {"Local   "}

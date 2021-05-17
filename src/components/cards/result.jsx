@@ -8,7 +8,6 @@ const ResultCard = (props) => {
 
     const hideImgWhenError = e => {
         e.target.onerror = null;
-        console.log(e);
         e.target.src=pfp;
     };
 
