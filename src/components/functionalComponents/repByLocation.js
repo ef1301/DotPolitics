@@ -114,7 +114,7 @@ const RepByLocation = (props) => {
             return(
                <> 
             <div>
-            <br /><p class='text-center' aria-label= "Show level of government">
+            <br /><p class='text-center' >
                 {"Show level of government: "}
                 <label>
                     <input type="checkbox" id="=local_results" value="Local" aria-label= "Show local results" onChange = {handleChange_Local} defaultChecked/> {"Local   "}
