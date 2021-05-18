@@ -106,14 +106,14 @@ const RepByLocation = (props) => {
             });
             let row3 = items.map((item,index) => {
                 if (federal_checked === true){
-                    if(item.divisionId.includes("us") && federal === false ){federal =true;return <><h1 aria-label= "Federal" tabindex = "0">Federal</h1> <ResultCard  key={index} item={item}/></>;} 
+                    if(item.divisionId.includes("us") && federal === false ){federal =true;return <><h1 className="labelFederal" aria-label= "Federal" tabindex = "0">Federal</h1> <ResultCard  key={index} item={item}/></>;} 
                     else if(item.divisionId.includes("us") && !item.divisionId.includes("state") ){return <><ResultCard  key={index} item={item}/></>}
                 }
                 else{return <> </> }
             });
             return(
                <> 
-            <div>
+            <div className="label">
             <br /><p className='text-center'>
                 {"Show level of government: "}
                 <label>
