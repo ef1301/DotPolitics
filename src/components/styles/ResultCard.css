@@ -26,14 +26,32 @@
     width:50%;
 }
 
+
 .pdf{
     position: absolute;
-    left: 90%;
+    left: 85%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     border: none;
-    color: white;  
+}
+.pdfbutton{
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--primary);
+  
+}
+.pdfbutton:hover {
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  color: blue;
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease-out;
 }
 
 
@@ -95,7 +113,6 @@
     line-height: 56px;
     left: 21%;
     bottom: 25%;
-    color: #000000; 
 }
 
 
@@ -110,7 +127,6 @@
     line-height: 56px;
     left: 40%;
     bottom: 33%;
-    color: #000000;
 }
 
 .website{
@@ -129,10 +145,12 @@
         position: relative;
         font-size: 100%;
     }
+    
     .pdf{
         position: absolute;
         left: 75%;
         width: 25%;
+        bottom: 65%;
     }
     .image{
         position: -webkit-sticky;
@@ -179,7 +197,6 @@
         line-height: 150%;
         left: 28%;
         bottom:-5%;
-        color: #000000; 
     }
     
     .link{
@@ -190,7 +207,6 @@
     line-height: 150%;
     left: 56%;
     bottom: 15%;
-    color: #000000;
     }
     .website{
         position: absolute      ;
@@ -206,9 +222,21 @@
   @media only screen and (max-width: 560px) {
     .pdf{
         position: absolute;
-        left: 65%;
-        width: 35%;
+        left: 55%;
+        width: 45%;
+        bottom:50%;
+        
     }
+    .pdfbutton{
+     font-size: 70%;
+    }
+    .label{
+    position: absolute; 
+    bottom:53%;
+    font-size: 70%;
+    left:5%;
+    }
+  
     .name{
         position: -webkit-sticky;
         text-align: center;
@@ -245,15 +273,42 @@
         transform: scale(1);
     }
   }
-
-  @media only screen and (max-width: 352px) {
+  @media only screen and (width: 411px) {
+    .label{
+    position: absolute; 
+    bottom:57%;
+    font-size: 70%;
+    left:5%;
+    }
     .pdf{
         position: absolute;
-        left: 70%;
-        font-size:70%;
-        width: 30%;
-        bottom: 55%;
+        left: 55%;
+        width: 35%;
+        bottom: 56%;
+    } 
+  }
+  @media only screen and (width: 375px) {
+    .label{
+    position: relative; 
+    bottom:54%;
+    font-size: 70%;
+    left:-3%;
     }
+    .pdf{
+        position: absolute;
+        left: 55%;
+        width: 35%;
+        bottom: 52%;
+    } 
+    .labelFederal{
+    position: relative;
+    width:50%;
+    left: 2%;
+    font-size: 210%;
+}
+  }
+  @media only screen and (max-width: 352px) {
+    
     .image{
         position: -webkit-sticky;
         width: 20%;
@@ -332,22 +387,35 @@
     }
   }
   @media only screen and (max-width: 321px) {
+    .label{
+    position: absolute; 
+    bottom:28%;
+    font-size: 70%;
+    left:5%;
+    }
     .pdf{
         position: absolute;
-        left: 10%;
+        left: 55%;
         width: 35%;
-        bottom: 35%;
+        bottom: 26%;
     }
   }
   @media only screen and (max-width: 319px) {
     .pdf{
         position: absolute;
         left: 60%;
-        bottom: 43%;
+        bottom: 35%;
         font-size: 50%;
-        width: 35%;
-       
+        width: 40%;
     }
+
+    .label{
+    position: absolute; 
+    bottom:37%;
+    font-size: 70%;
+    left:5%;
+    }
+
     .name{
         position: -webkit-sticky;
         text-align: center;
