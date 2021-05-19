@@ -6,7 +6,7 @@ const dlPDF = (props) => (
   <div className="pdf" >
     <PDFDownloadLink document={< PDF {...props} />} fileName="repByLocation.pdf"><button className="pdfbutton">Download now!
       {({ blob, url, loading, error }) =>
-        loading ? 'Loading document...' : 'Download now!' 
+        loading ? 'Loading document...' : 'Download results as PDF' 
       }</button>
     </PDFDownloadLink>
   </div>
