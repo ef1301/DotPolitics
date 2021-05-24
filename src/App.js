@@ -6,8 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RepByLocation from './components/functionalComponents/repByLocation';
 import Navbar from './components/functionalComponents/Navbar.jsx';
 import PollByLocation from './components/functionalComponents/pollByLocation';
-//import PDF from './components/functionalComponents/PDF';
-//import { PDFViewer, Text } from '@react-pdf/renderer';
 import PDFDownload from "./components/functionalComponents/PDFDownload"
 
 

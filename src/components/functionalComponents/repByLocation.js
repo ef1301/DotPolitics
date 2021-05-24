@@ -20,7 +20,6 @@ const RepByLocation = (props) => {
         .then(res => res.json())
         .then(
             (result) => {
-                //console.log(result);
                 if(result.error) {
                     setIsLoaded(isLoaded => true);
                     setError(result.error);
@@ -28,7 +27,6 @@ const RepByLocation = (props) => {
                     setIsLoaded(isLoaded => true);
                     setItems(items => {
                         const newItems = result.officials;
-                        //const Local = result.office.divisionId.includes("county");
                        result.offices.map(office => 
                             office.officialIndices.map(index =>
                                 newItems[index].officeName = office.name

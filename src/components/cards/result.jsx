@@ -79,4 +79,3 @@ const ResultCardPoll = (props) => {
 };
 
 export {ResultCard, ResultCardPoll};
-// export default ResultCard;

@@ -30,39 +30,40 @@ const PDF = (props) => {
         .then(
             (result) => {
                 debugger
-                setCandidates(result.officials.map(official=>{
-                    // let image =  official.photoUrl ? <Image src={official.photoUrl} alt={`${official.name} photo`}></Image> : <Image src={pfp} alt={`${official.name} photo`} aria-label="No Representative Photo"></Image>
-                    let phones = official.phones ? official.phones.map((number,index) => <p key={`${official.name} phone ${index}`}>{number}</p>) : <></>
-                    let links = official.urls ? official.urls.map((link, index) => <p><a key={index} href={link}>{link}</a></p>) : <></>
-                    let social_media =  official.channels ? official.channels.map((channel, index) => {
-                            if(channel.type === "Twitter") {
-                                return( <Text style={styles.socialmedia}>
-                                    {"https://twitter.com/" + channel.id}
-                                </Text>);
-                            } else if (channel.type === "Facebook") {
-                                return( <Text style={styles.socialmedia}>
-                                    {"https://facebook.com/" + channel.id}
-                                </Text>);
-                            } else return <></>;
-                        }) :
-                        <></>
-                    return <>
-                        <Text style={styles.party}>
-                            {official.party}
-                        </Text>
-                        <Text style={styles.name}>
-                            {official.name}
-                        </Text>
-                        <Text style={styles.subtext}>
-                            Phone: {phones}
-                        </Text>
-                        <Text style={styles.subtext}>
-                            Links: {links}
-                        </Text>
-                        {social_media}
-                        <Text style={styles.seperate}/>
-                    </>
-                }))
+                if(!result.error) {
+                    setCandidates(result.officials.map(official=>{
+                        let phones = official.phones ? official.phones.map((number,index) => <p key={`${official.name} phone ${index}`}>{number}</p>) : <></>
+                        let links = official.urls ? official.urls.map((link, index) => <p><a key={index} href={link}>{link}</a></p>) : <></>
+                        let social_media =  official.channels ? official.channels.map((channel, index) => {
+                                if(channel.type === "Twitter") {
+                                    return( <Text style={styles.socialmedia}>
+                                        {"https://twitter.com/" + channel.id}
+                                    </Text>);
+                                } else if (channel.type === "Facebook") {
+                                    return( <Text style={styles.socialmedia}>
+                                        {"https://facebook.com/" + channel.id}
+                                    </Text>);
+                                } else return <></>;
+                            }) :
+                            <></>
+                        return <>
+                            <Text style={styles.party}>
+                                {official.party}
+                            </Text>
+                            <Text style={styles.name}>
+                                {official.name}
+                            </Text>
+                            <Text style={styles.subtext}>
+                                Phone: {phones}
+                            </Text>
+                            <Text style={styles.subtext}>
+                                Links: {links}
+                            </Text>
+                            {social_media}
+                            <Text style={styles.seperate}/>
+                        </>
+                    }))
+                }
             },
 
             (er) => {
